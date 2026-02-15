@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">在对 Amax 与模型参数规模进行 log–log 绘制后，可以观察到明显的放大趋势：当模型规模为 1000 万参数时，Amax 约为 9.2 倍；在 17 亿参数规模下，这一数值跃升至 10924 倍；</p>
+<p class="text">而公开数据中，DeepSeek 的 270 亿参数模型对应的 Amax 约为 3000 倍。基于趋势线外推，模型规模达到 100 亿参数时，Amax 可能上升至约 50000 倍，在 1000 亿参数量级下，甚至可能接近 400000 倍。</p>
+  </div>
+</div>
+</body>
+</html>

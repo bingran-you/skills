@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>刚刚，梁文锋署名，DeepSeek元旦新论文要开启架构新篇章</h1></div>
+  <div class="content">
+    <p class="text">其中 是 Sigmoid 函数。Sinkhorn-Knopp 算子首先通过指数操作确保所有元素为正，然后进行迭代规范化，交替缩放行和列使其和为 1。</p>
+<p class="text">DeepSeek 在实验中采用 t_max=20 次迭代。</p>
+<p class="text">高效基础设施设计</p>
+<p class="text">DeepSeek 还为 mHC 量身定制了基础设施设计，使其在 n=4 时在大模型中的训练开销仅增加 6.7%：</p>
+<p class="text">算子融合 (Kernel Fusion)：</p>
+<p class="text">重新调整 RMSNorm 的顺序以提高效率，并采用混合精度策略。</p>
+<p class="text">开发了统一的算子，将多次扫描和矩阵乘法融合，减少内存带宽瓶颈和算子启动开销。</p>
+  </div>
+</div>
+</body>
+</html>

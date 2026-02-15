@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">三个矩阵控制着信息的流动方式：</p>
+<p class="text">H_res：信息流在残差路径中如何混合（红色的交叉部分）</p>
+<p class="text">H_pre：信息流在进入层之前如何组合</p>
+<p class="text">H_post：层的输出如何分配回各个流中</p>
+<p class="text">超连接表达能力更强。参数更多，但计算开销几乎可以忽略不计。理论上性能更好。亦可参阅报道《 字节豆包大模型团队突破残差连接局限！预训练收敛最快加速 80% 》。</p>
+<p class="text">但问题是什么？那些混合矩阵是不受约束的。它们不仅能路由信号，还能放大信号。</p>
+<p class="text">爆炸</p>
+<p class="text">在激进的学习率下，作者的复现实验中超连接（HC）的信号放大达到了 7 倍，随后最终崩溃。Amax（行和列绝对值的最大值）衡量了一个矩阵能将信号放大多少。</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>刚刚，梁文锋署名，DeepSeek元旦新论文要开启架构新篇章</h1></div>
+  <div class="content">
+    <p class="text">团队利用 Sinkhorn-Knopp 算法 将残差连接矩阵投影到 Birkhoff 多胞形（双随机矩阵）上。这使得信号传播变为特征的「凸组合」，从数学上严格保证了信号范数的稳定性（能量守恒）。为了抵消加宽通道带来的开销，团队实施了 内核融合、选择性重计算以及扩展的 DualPipe 通信计算重叠策略 。</p>
+<p class="text">实证表明，mHC 不仅解决了稳定性问题，且在大规模训练中（如 27B 模型）表现出卓越的可扩展性。 在 n=4 的扩展倍率下，仅增加了 6.7% 的训练时间开销，却换来了显著的性能提升 。mHC 为基础模型的拓扑架构演进指明了方向。</p>
+  </div>
+</div>
+</body>
+</html>

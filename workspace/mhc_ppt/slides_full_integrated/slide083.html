@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">压力测试： 在激进的学习率下，HC 的信号放大在崩溃前达到了 7 倍。mHC 保持平稳，维持在 1.0。</p>
+<p class="text">修复：约束流形</p>
+<p class="text">DeepSeek 的修复方案很干净：将混合矩阵约束为 双重随机（doubly stochastic） 。</p>
+<p class="text">一个双重随机矩阵具有以下特性：</p>
+<p class="text">所有条目非负</p>
+<p class="text">行之和为 1</p>
+<p class="text">列之和为 1</p>
+  </div>
+</div>
+</body>
+</html>

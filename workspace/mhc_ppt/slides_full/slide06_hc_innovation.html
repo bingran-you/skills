@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 25pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 10pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.text-block {
+  color: #333333; font-size: 11pt; line-height: 1.4;
+  margin-bottom: 8pt;
+}
+.matrix-section {
+  display: flex; gap: 10pt; margin: 8pt 0;
+}
+.matrix-box {
+  flex: 1; background: #f5f5f7; padding: 8pt 10pt; border-radius: 6pt;
+  text-align: center;
+}
+.matrix-name {
+  color: #B165FB; font-size: 14pt; font-weight: bold; margin-bottom: 4pt;
+}
+.matrix-desc {
+  color: #666666; font-size: 9pt;
+}
+.highlight-box {
+  background: #e74c3c; color: #ffffff; padding: 10pt 12pt;
+  border-radius: 6pt; margin: 10pt 0;
+}
+.highlight-text {
+  font-size: 11pt; margin: 0;
+}
+.result-box {
+  background: #181B24; padding: 10pt 12pt; border-radius: 6pt; margin-top: 8pt;
+}
+.result-text {
+  color: #ffffff; font-size: 11pt; margin: 0;
+}
+.result-highlight {
+  color: #B165FB; font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>Hyper-Connections 的创新</h1>
+  </div>
+
+  <p class="text-block">2024年9月，字节跳动提出了一个大胆的想法：<b>把单一残差流扩展为 n 条并行流</b>，让信息有更多通道传递。</p>
+
+  <p class="text-block">为了协调这些流，HC 引入了三个<b>可学习的混合矩阵</b>：</p>
+
+  <div class="matrix-section">
+    <div class="matrix-box">
+      <p class="matrix-name">H<sub>res</sub></p>
+      <p class="matrix-desc">残差混合矩阵<br>控制跨流信息传递</p>
+    </div>
+    <div class="matrix-box">
+      <p class="matrix-name">H<sub>pre</sub></p>
+      <p class="matrix-desc">前置混合矩阵<br>进入子层前的混合</p>
+    </div>
+    <div class="matrix-box">
+      <p class="matrix-name">H<sub>post</sub></p>
+      <p class="matrix-desc">后置混合矩阵<br>子层输出后的混合</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p class="highlight-text"><b>核心思想：</b>通过可学习的权重矩阵，让网络自己决定如何在多条信息流之间分配和混合特征。</p>
+  </div>
+
+  <div class="result-box">
+    <p class="result-text">实验结果：在 MoE 模型上实现 <span class="result-highlight">1.8 倍收敛加速</span>，证明多流架构确实有效。</p>
+  </div>
+</div>
+</body>
+</html>

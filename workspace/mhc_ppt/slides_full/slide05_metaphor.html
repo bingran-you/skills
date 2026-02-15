@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 25pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 12pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.intro {
+  color: #666666; font-size: 11pt; font-style: italic; margin-bottom: 12pt;
+}
+.metaphor-grid {
+  display: flex; gap: 12pt; margin: 10pt 0;
+}
+.metaphor-card {
+  flex: 1; padding: 12pt; border-radius: 8pt; text-align: center;
+}
+.card-resnet {
+  background: #f0f0f0; border: 2pt solid #999999;
+}
+.card-hc {
+  background: #fff5f5; border: 2pt solid #e74c3c;
+}
+.card-mhc {
+  background: #f0fff0; border: 2pt solid #40695B;
+}
+.card-title {
+  font-size: 14pt; font-weight: bold; margin-bottom: 6pt;
+}
+.card-metaphor {
+  font-size: 11pt; margin-bottom: 6pt;
+}
+.card-desc {
+  font-size: 10pt; color: #666666; line-height: 1.3;
+}
+.source-box {
+  background: #181B24; padding: 10pt 12pt; border-radius: 6pt; margin-top: 10pt;
+}
+.source-text {
+  color: #888888; font-size: 10pt; font-style: italic;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>织毛衣的比喻</h1>
+  </div>
+
+  <p class="intro">在Reddit上，有网友用一个比喻来解释这段技术演进：</p>
+
+  <div class="metaphor-grid">
+    <div class="metaphor-card card-resnet">
+      <p class="card-title" style="color: #666666;">ResNet</p>
+      <p class="card-metaphor"><b>单股线</b></p>
+      <p class="card-desc">稳定但通道有限<br>容易断但不会乱</p>
+    </div>
+    <div class="metaphor-card card-hc">
+      <p class="card-title" style="color: #e74c3c;">Hyper-Connections</p>
+      <p class="card-metaphor"><b>多股线</b></p>
+      <p class="card-desc">毛衣更结实、花纹更漂亮<br>但线太多容易乱成一团</p>
+    </div>
+    <div class="metaphor-card card-mhc">
+      <p class="card-title" style="color: #40695B;">mHC</p>
+      <p class="card-metaphor"><b>智能理线器</b></p>
+      <p class="card-desc">让多股线排列整齐<br>多股线优点 + 单股线顺滑</p>
+    </div>
+  </div>
+
+  <div class="source-box">
+    <p class="source-text">「就像织毛衣。以前我们只用单股线，容易打结也容易断。现在改用多股线一起织，毛衣更结实、花纹更漂亮。但问题是线太多容易乱成一团。所以我们发明了一个智能理线器，让多股线排列整齐，既保留了多股线的优点，又像单股线一样顺滑好织。」— Reddit用户</p>
+  </div>
+</div>
+</body>
+</html>

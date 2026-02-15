@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">深度 64 的模型在 Amax 达到 14765 倍后，开始在 2000 倍到 10000 倍之间剧烈振荡，同时，混合矩阵彻底失控。</p>
+<p class="text">反观 mHC，在所有配置、所有学习率下都表现得平坦、稳定且「无聊」，数值始终保持在 1.0。</p>
+<p class="text">意料之外：HC 模型并未崩溃</p>
+  </div>
+</div>
+</body>
+</html>

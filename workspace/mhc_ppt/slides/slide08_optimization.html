@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 30pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 12pt;
+}
+h1 {
+  color: #181B24; font-size: 24pt; margin: 0;
+}
+.intro {
+  color: #333333; font-size: 13pt; line-height: 1.4; margin-bottom: 15pt;
+}
+.opt-grid {
+  display: flex; gap: 12pt; margin-top: 12pt;
+}
+.opt-card {
+  flex: 1; background: #181B24; padding: 15pt; border-radius: 8pt;
+  text-align: center;
+}
+.opt-icon {
+  color: #B165FB; font-size: 24pt; margin-bottom: 8pt;
+}
+.opt-title {
+  color: #B165FB; font-size: 14pt; font-weight: bold; margin-bottom: 6pt;
+}
+.opt-desc {
+  color: #aaaaaa; font-size: 11pt; line-height: 1.3;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>工程优化策略</h1>
+  </div>
+  <p class="intro">为了抵消加宽通道带来的开销，团队实施了一系列严格的基础设施优化：</p>
+
+  <div class="opt-grid">
+    <div class="opt-card">
+      <p class="opt-icon">1</p>
+      <p class="opt-title">内核融合</p>
+      <p class="opt-desc">Kernel Fusion<br>减少GPU内核启动开销，提升计算效率</p>
+    </div>
+    <div class="opt-card">
+      <p class="opt-icon">2</p>
+      <p class="opt-title">选择性重计算</p>
+      <p class="opt-desc">Selective Recomputation<br>优化显存使用，平衡计算与存储</p>
+    </div>
+    <div class="opt-card">
+      <p class="opt-icon">3</p>
+      <p class="opt-title">DualPipe扩展</p>
+      <p class="opt-desc">Extended DualPipe<br>通信计算重叠策略，提升并行效率</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

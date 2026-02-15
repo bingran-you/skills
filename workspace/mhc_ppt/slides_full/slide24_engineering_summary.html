@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #181B24; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #40695B;
+}
+.content {
+  margin: 15pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #40695B; padding-left: 15pt; margin-bottom: 10pt;
+}
+h1 {
+  color: #ffffff; font-size: 20pt; margin: 0;
+}
+.summary-grid {
+  display: flex; gap: 10pt; margin: 10pt 0;
+}
+.summary-card {
+  flex: 1; background: rgba(255,255,255,0.05); border: 1pt solid #444;
+  padding: 10pt; border-radius: 6pt; text-align: center;
+}
+.summary-icon {
+  font-size: 22pt; margin-bottom: 6pt;
+}
+.summary-title {
+  color: #40695B; font-size: 11pt; font-weight: bold; margin-bottom: 4pt;
+}
+.summary-desc {
+  color: #cccccc; font-size: 9pt; line-height: 1.3;
+}
+.quote-box {
+  background: #40695B; padding: 12pt 15pt; border-radius: 6pt;
+}
+.quote-text {
+  color: #ffffff; font-size: 11pt; font-style: italic; line-height: 1.4;
+  text-align: center;
+}
+.badge-container {
+  text-align: center; margin-top: 8pt;
+}
+.badge {
+  background: #B165FB; color: #ffffff;
+  padding: 4pt 10pt; border-radius: 4pt; font-size: 10pt;
+  display: inline-block;
+}
+.badge-text {
+  color: #ffffff; font-size: 10pt;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>工程能力总结</h1>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card">
+      <p class="summary-icon">🔧</p>
+      <p class="summary-title">底层优化</p>
+      <p class="summary-desc">手写 CUDA 内核<br>深入 GPU 架构<br>极致性能调优</p>
+    </div>
+    <div class="summary-card">
+      <p class="summary-icon">💾</p>
+      <p class="summary-title">内存管理</p>
+      <p class="summary-desc">选择性重计算<br>显存精细控制<br>峰值内存优化</p>
+    </div>
+    <div class="summary-card">
+      <p class="summary-icon">🌐</p>
+      <p class="summary-title">分布式系统</p>
+      <p class="summary-desc">通信计算重叠<br>流水线并行优化<br>多节点高效扩展</p>
+    </div>
+    <div class="summary-card">
+      <p class="summary-icon">⚡</p>
+      <p class="summary-title">最终效果</p>
+      <p class="summary-desc">n=4 扩展倍率<br><b>仅增加 6.7%</b><br>训练时间开销</p>
+    </div>
+  </div>
+
+  <div class="quote-box">
+    <p class="quote-text">「DeepSeek 最大的优势不仅是算法创新，更是能把想法<b>稳定、高效地落地</b>到算力体系中。」</p>
+  </div>
+  <div class="badge-container">
+    <div class="badge"><p class="badge-text" style="margin:0;">硬核工程 × 理论创新</p></div>
+  </div>
+</div>
+</body>
+</html>

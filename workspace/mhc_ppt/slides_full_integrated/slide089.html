@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">当作者第一次看到这个时，感觉像是作弊。你不是在学习稳定性，而是在强制它。但有些属性不应该被学习；它们应该被保证。</p>
+<p class="text">技术说明：严格来说，只有递归矩阵 H_res 需要完整的 Sinkhorn 双重随机处理。它是层层复合误差的那个。输入 / 输出混合器（H_pre，H_post）仅通过 sigmoid 进行有界处理。Sinkhorn 的计算成本只花在最重要的地方。</p>
+<p class="text">结果</p>
+  </div>
+</div>
+</body>
+</html>

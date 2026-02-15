@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 25pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 10pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.comparison-grid {
+  display: flex; gap: 12pt; margin: 10pt 0;
+}
+.method-card {
+  flex: 1; padding: 10pt; border-radius: 6pt;
+}
+.hc-card {
+  background: #fff5f5; border: 2pt solid #e74c3c;
+}
+.mhc-card {
+  background: #f0fff0; border: 2pt solid #40695B;
+}
+.method-title {
+  font-size: 14pt; font-weight: bold; margin-bottom: 8pt; text-align: center;
+}
+.chart-area {
+  background: #181B24; padding: 10pt; border-radius: 4pt;
+  height: 80pt; position: relative;
+}
+.chart-line {
+  position: absolute; bottom: 10pt; left: 10pt; right: 10pt;
+  height: 60pt;
+}
+.hc-line {
+  border-bottom: 2pt solid #e74c3c;
+  transform: skewY(-5deg);
+  position: relative;
+}
+.hc-spike {
+  position: absolute; width: 2pt; background: #e74c3c;
+}
+.mhc-line {
+  border-bottom: 2pt solid #40695B;
+  height: 30pt;
+}
+.metric-row {
+  display: flex; justify-content: space-between; margin-top: 8pt;
+  font-size: 10pt;
+}
+.metric-label { color: #666666; }
+.metric-value { font-weight: bold; }
+.stress-box {
+  background: #181B24; padding: 10pt 12pt; border-radius: 6pt; margin-top: 10pt;
+}
+.stress-title {
+  color: #B165FB; font-size: 11pt; font-weight: bold; margin-bottom: 6pt;
+}
+.stress-row {
+  display: flex; gap: 20pt;
+}
+.stress-item {
+  flex: 1; text-align: center;
+}
+.stress-label { color: #888888; font-size: 9pt; margin-bottom: 2pt; }
+.stress-value { font-size: 14pt; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>HC vs mHC 稳定性对比</h1>
+  </div>
+
+  <div class="comparison-grid">
+    <div class="method-card hc-card">
+      <p class="method-title" style="color: #e74c3c;">Hyper-Connections</p>
+      <div class="chart-area">
+        <p style="color: #888; font-size: 8pt; position: absolute; top: 5pt; left: 5pt;">Amax</p>
+        <div class="chart-line">
+          <div style="position: absolute; left: 20%; bottom: 0; width: 2pt; height: 40pt; background: #e74c3c;"></div>
+          <div style="position: absolute; left: 45%; bottom: 0; width: 2pt; height: 55pt; background: #e74c3c;"></div>
+          <div style="position: absolute; left: 70%; bottom: 0; width: 2pt; height: 35pt; background: #e74c3c;"></div>
+          <div style="position: absolute; left: 90%; bottom: 0; width: 2pt; height: 50pt; background: #e74c3c;"></div>
+        </div>
+        <p style="color: #e74c3c; font-size: 8pt; position: absolute; bottom: 5pt; right: 5pt;">剧烈波动 ↑</p>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">深度32层 Amax:</span>
+        <span class="metric-value" style="color: #e74c3c;">6,500×</span>
+      </div>
+    </div>
+    <div class="method-card mhc-card">
+      <p class="method-title" style="color: #40695B;">mHC (Manifold-Constrained)</p>
+      <div class="chart-area">
+        <p style="color: #888; font-size: 8pt; position: absolute; top: 5pt; left: 5pt;">Amax</p>
+        <div style="position: absolute; bottom: 15pt; left: 10pt; right: 10pt; height: 2pt; background: #40695B;"></div>
+        <p style="color: #40695B; font-size: 8pt; position: absolute; bottom: 5pt; right: 5pt;">始终平稳 →</p>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">深度32层 Amax:</span>
+        <span class="metric-value" style="color: #40695B;">1.0×</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stress-box">
+    <p class="stress-title">压力测试 (3倍学习率 + 64层深度)</p>
+    <div class="stress-row">
+      <div class="stress-item">
+        <p class="stress-label">HC Amax</p>
+        <p class="stress-value" style="color: #e74c3c;">14,765×</p>
+      </div>
+      <div class="stress-item">
+        <p class="stress-label">mHC Amax</p>
+        <p class="stress-value" style="color: #40695B;">1.0×</p>
+      </div>
+      <div class="stress-item">
+        <p class="stress-label">稳定性差异</p>
+        <p class="stress-value" style="color: #B165FB;">14765 : 1</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

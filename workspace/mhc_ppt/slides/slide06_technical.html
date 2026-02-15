@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 25pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 10pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.tech-card {
+  background: #f8f9fa; border-radius: 6pt; padding: 8pt 10pt;
+  margin: 6pt 0; border: 1pt solid #e0e0e0;
+}
+.tech-title {
+  color: #B165FB; font-size: 13pt; font-weight: bold; margin-bottom: 4pt;
+}
+.tech-desc {
+  color: #333333; font-size: 11pt; line-height: 1.3;
+}
+.highlight {
+  background: #B165FB; color: #ffffff; padding: 1pt 3pt;
+  border-radius: 3pt; font-weight: bold;
+}
+.result-box {
+  background: #40695B; padding: 8pt 10pt; border-radius: 6pt; margin-top: 8pt;
+}
+.result-text {
+  color: #ffffff; font-size: 11pt; line-height: 1.3;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>mHC技术实现</h1>
+  </div>
+
+  <div class="tech-card">
+    <p class="tech-title">Sinkhorn-Knopp 算法</p>
+    <p class="tech-desc">利用 <span class="highlight">Sinkhorn-Knopp 算法</span> 将残差连接矩阵投影到 Birkhoff 多胞形（双拟随机矩阵）上。</p>
+  </div>
+
+  <div class="tech-card">
+    <p class="tech-title">双拟随机矩阵约束</p>
+    <p class="tech-desc">将残差映射限制为<b>双拟随机矩阵</b>，即具有非负项且行和与列和均为 1 的矩阵。</p>
+  </div>
+
+  <div class="tech-card">
+    <p class="tech-title">信号稳定性保证</p>
+    <p class="tech-desc">信号传播变为特征的「凸组合」，从数学上严格保证了信号范数的稳定性（能量守恒）。</p>
+  </div>
+
+  <div class="result-box">
+    <p class="result-text">mHC 的核心前提是将残差映射约束在一个特定的流形上，既能保持跨层信号传播的稳定性，又能促进残差流之间的相互作用。</p>
+  </div>
+</div>
+</body>
+</html>

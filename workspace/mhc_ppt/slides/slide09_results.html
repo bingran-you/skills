@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 30pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 15pt;
+}
+h1 {
+  color: #181B24; font-size: 24pt; margin: 0;
+}
+.result-grid {
+  display: flex; gap: 15pt; margin: 15pt 0;
+}
+.result-card {
+  flex: 1; background: #f8f9fa; padding: 15pt; border-radius: 8pt;
+  text-align: center; border: 2pt solid #e0e0e0;
+}
+.result-number {
+  color: #B165FB; font-size: 32pt; font-weight: bold;
+}
+.result-unit {
+  color: #666666; font-size: 13pt;
+}
+.result-desc {
+  color: #333333; font-size: 12pt; margin-top: 8pt;
+}
+.highlight-box {
+  background: #40695B; padding: 12pt 15pt; border-radius: 8pt; margin-top: 15pt;
+}
+.highlight-text {
+  color: #ffffff; font-size: 13pt; text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>实验结果</h1>
+  </div>
+
+  <div class="result-grid">
+    <div class="result-card">
+      <p class="result-number">n=4</p>
+      <p class="result-unit">扩展倍率</p>
+      <p class="result-desc">残差流宽度扩展为原来的4倍</p>
+    </div>
+    <div class="result-card">
+      <p class="result-number">6.7%</p>
+      <p class="result-unit">额外开销</p>
+      <p class="result-desc">仅增加6.7%的训练时间开销</p>
+    </div>
+    <div class="result-card">
+      <p class="result-number">27B</p>
+      <p class="result-unit">模型规模</p>
+      <p class="result-desc">在大规模训练中表现出卓越的可扩展性</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p class="highlight-text">实证表明，mHC 不仅解决了稳定性问题，且在大规模训练中表现出卓越的可扩展性，换来了显著的性能提升。mHC 为基础模型的拓扑架构演进指明了方向。</p>
+  </div>
+</div>
+</body>
+</html>

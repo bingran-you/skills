@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 30pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 12pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.image-container {
+  text-align: center; margin: 12pt 0;
+}
+.caption {
+  color: #666666; font-size: 10pt; font-style: italic;
+  text-align: center; margin-top: 8pt; line-height: 1.3;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>架构对比：残差连接 vs HC vs mHC</h1>
+  </div>
+  <div class="image-container" id="arch-image" class="placeholder" style="width: 620pt; height: 260pt; background: #f5f5f5;"></div>
+  <p class="caption">图：残差连接范式示意图。本图对比了以下三种结构设计：(a) 标准残差连接（Residual Connection）；(b) Hyper-Connections (HC)；(c) 我们提出的 Manifold-Constrained Hyper-Connections (mHC)。与无约束的 HC 不同，mHC 专注于优化残差连接空间，通过将矩阵投影到受约束的流形上，以确保稳定性。</p>
+</div>
+</body>
+</html>

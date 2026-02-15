@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #40695B;
+}
+.content {
+  margin: 12pt 40pt; width: 100%;
+}
+.section-label {
+  color: #40695B; font-size: 9pt; text-transform: uppercase;
+  letter-spacing: 2pt; margin-bottom: 4pt;
+}
+.title-wrapper {
+  border-left: 6pt solid #40695B; padding-left: 15pt; margin-bottom: 8pt;
+}
+h1 {
+  color: #181B24; font-size: 20pt; margin: 0;
+}
+.rec-list {
+  margin: 6pt 0;
+}
+.rec-item {
+  display: flex; margin: 4pt 0; background: #f5f5f7;
+  border-radius: 6pt; overflow: hidden;
+}
+.rec-num {
+  background: #40695B; color: #ffffff; padding: 8pt 12pt;
+  font-size: 14pt; font-weight: bold; display: flex;
+  align-items: center; justify-content: center;
+}
+.rec-content {
+  padding: 5pt 10pt; flex: 1;
+}
+.rec-title {
+  color: #181B24; font-size: 10pt; font-weight: bold; margin-bottom: 2pt;
+}
+.rec-desc {
+  color: #666666; font-size: 9pt; line-height: 1.3;
+}
+.rec-code {
+  background: #181B24; color: #B165FB; padding: 1pt 4pt;
+  border-radius: 2pt; font-family: monospace; font-size: 8pt;
+}
+.note-box {
+  background: #181B24; padding: 8pt 10pt; border-radius: 6pt;
+}
+.note-text {
+  color: #ffffff; font-size: 10pt;
+}
+.note-highlight {
+  color: #40695B; font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <p class="section-label">Part 7: 总结与展望</p>
+  <div class="title-wrapper">
+    <h1>实施建议</h1>
+  </div>
+
+  <div class="rec-list">
+    <div class="rec-item">
+      <div class="rec-num"><p style="margin:0;">1</p></div>
+      <div class="rec-content">
+        <p class="rec-title">必须使用 Sinkhorn 投影</p>
+        <p class="rec-desc">核心修复仅需 <span class="rec-code">~10 行代码</span>，却能带来巨大的稳定性提升。</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num"><p style="margin:0;">2</p></div>
+      <div class="rec-content">
+        <p class="rec-title">监控 Amax 值</p>
+        <p class="rec-desc">阈值：<span class="rec-code">Amax > 10×</span> 表示积聚不稳定性，需要警惕。</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num"><p style="margin:0;">3</p></div>
+      <div class="rec-content">
+        <p class="rec-title">密切关注第 0 层</p>
+        <p class="rec-desc">输入混合矩阵是"金丝雀"——它最先显示不稳定迹象。</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num"><p style="margin:0;">4</p></div>
+      <div class="rec-content">
+        <p class="rec-title">零性能代价</p>
+        <p class="rec-desc">mHC 与 HC 的 Loss 相同，你获得的是<b>纯粹的稳定性收益</b>。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <p class="note-text">核心原则：<span class="note-highlight">简单的数学约束 > 复杂的工程补丁</span></p>
+  </div>
+</div>
+</body>
+</html>

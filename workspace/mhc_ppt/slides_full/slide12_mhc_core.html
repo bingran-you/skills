@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #40695B;
+}
+.content {
+  margin: 15pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #40695B; padding-left: 15pt; margin-bottom: 8pt;
+}
+h1 {
+  color: #181B24; font-size: 20pt; margin: 0;
+}
+.intro {
+  color: #333333; font-size: 11pt; margin-bottom: 8pt;
+}
+.solution-box {
+  background: #181B24; padding: 10pt 15pt; border-radius: 6pt;
+  text-align: center; margin: 8pt 0;
+}
+.solution-title {
+  color: #40695B; font-size: 14pt; font-weight: bold; margin-bottom: 4pt;
+}
+.solution-text {
+  color: #ffffff; font-size: 12pt;
+}
+.highlight {
+  color: #B165FB; font-weight: bold;
+}
+.benefit-grid {
+  display: flex; gap: 8pt; margin: 8pt 0;
+}
+.benefit-box {
+  flex: 1; background: #f0fff0; border: 2pt solid #40695B;
+  padding: 8pt; border-radius: 6pt; text-align: center;
+}
+.benefit-icon {
+  font-size: 18pt; margin-bottom: 2pt;
+}
+.benefit-text {
+  color: #333333; font-size: 9pt;
+}
+.quote-box {
+  background: #40695B; color: #ffffff; padding: 8pt 10pt;
+  border-radius: 6pt;
+}
+.quote-text {
+  font-size: 10pt; font-style: italic;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>mHC 的核心创新</h1>
+  </div>
+
+  <p class="intro">DeepSeek 的解决方案出人意料地优雅：不是删除 HC 的特性，而是<b>给它加上数学"护栏"</b>。</p>
+
+  <div class="solution-box">
+    <p class="solution-title">核心思想</p>
+    <p class="solution-text">将连接权重矩阵约束在 <span class="highlight">双随机矩阵流形</span> 上 (Doubly Stochastic Matrix)</p>
+  </div>
+
+  <div class="benefit-grid">
+    <div class="benefit-box">
+      <p class="benefit-icon">🛡️</p>
+      <p class="benefit-text"><b>保持稳定</b><br>恒等映射属性恢复</p>
+    </div>
+    <div class="benefit-box">
+      <p class="benefit-icon">⚡</p>
+      <p class="benefit-text"><b>保留性能</b><br>多流架构优势保留</p>
+    </div>
+    <div class="benefit-box">
+      <p class="benefit-icon">🎯</p>
+      <p class="benefit-text"><b>零额外参数</b><br>不增加超参数</p>
+    </div>
+    <div class="benefit-box">
+      <p class="benefit-icon">📐</p>
+      <p class="benefit-text"><b>数学可证</b><br>严格理论保证</p>
+    </div>
+  </div>
+
+  <div class="quote-box">
+    <p class="quote-text">「这不是黑客手段，而是原则性约束。我们没有限制模型能学什么，只是确保它学的方式是稳定的。」</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>刚刚，梁文锋署名，DeepSeek元旦新论文要开启架构新篇章</h1></div>
+  <div class="content">
+    <p class="text">近期，以字节跳动Seed团队提出的 Hyper-Connections (HC) 为代表的研究，通过扩展残差流宽度和多样化连接模式，拓展了过去十年中广泛应用的残差连接范式。</p>
+<p class="text">虽然这些方法带来了显著的性能提升，但但也带来了两个严重问题：</p>
+<p class="text">数值不稳定性 ： 原始的 HC 中，连接矩阵是自由学习的，没有约束。这导致信号在经过多层传播后，数值会「爆炸」或「消失」，破坏了恒等映射的特性，模型越深越难训练。</p>
+<p class="text">系统开销大 ： 通道变宽意味着显存读写 (I/O) 和通信成本成倍增加，也就是所谓的「显存墙」问题。</p>
+  </div>
+</div>
+</body>
+</html>

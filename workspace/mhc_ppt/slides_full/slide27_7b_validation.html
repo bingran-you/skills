@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #40695B;
+}
+.content {
+  margin: 15pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #40695B; padding-left: 15pt; margin-bottom: 8pt;
+}
+h1 {
+  color: #181B24; font-size: 20pt; margin: 0;
+}
+.comparison-box {
+  display: flex; gap: 12pt; margin: 8pt 0;
+}
+.model-card {
+  flex: 1; padding: 10pt; border-radius: 6pt;
+}
+.dense-card {
+  background: #f5f5f7; border: 2pt solid #666666;
+}
+.moe-card {
+  background: #f0fff0; border: 2pt solid #40695B;
+}
+.model-title {
+  font-size: 11pt; font-weight: bold; margin-bottom: 6pt;
+}
+.model-result {
+  font-size: 10pt; line-height: 1.4; color: #333333;
+}
+.highlight-good {
+  color: #40695B; font-weight: bold;
+}
+.chart-placeholder {
+  background: #181B24; padding: 10pt; border-radius: 6pt; margin: 8pt 0;
+  text-align: center;
+}
+.chart-title {
+  color: #B165FB; font-size: 10pt; margin-bottom: 6pt;
+}
+.chart-visual {
+  display: flex; align-items: flex-end; justify-content: center;
+  gap: 15pt; height: 60pt;
+}
+.bar {
+  width: 50pt; text-align: center;
+}
+.bar-fill {
+  border-radius: 3pt 3pt 0 0;
+}
+.bar-label {
+  color: #888888; font-size: 8pt; margin-top: 3pt;
+}
+.insight-box {
+  background: #40695B; color: #ffffff; padding: 8pt 10pt;
+  border-radius: 6pt;
+}
+.insight-text {
+  font-size: 10pt;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>7B 模型验证</h1>
+  </div>
+
+  <div class="comparison-box">
+    <div class="model-card dense-card">
+      <p class="model-title" style="color: #666666;">Dense 模型 (7B)</p>
+      <p class="model-result">mHC 模型全程<span class="highlight-good">没有出现任何 Loss 尖峰</span></p>
+      <p class="model-result">训练曲线平滑稳定</p>
+      <p class="model-result">最终性能与 HC 相当</p>
+    </div>
+    <div class="model-card moe-card">
+      <p class="model-title" style="color: #40695B;">MoE 模型 (7B)</p>
+      <p class="model-result">收敛速度提升约 <span class="highlight-good">1.8 倍</span></p>
+      <p class="model-result">完全消除训练不稳定问题</p>
+      <p class="model-result">验证多流架构的优势</p>
+    </div>
+  </div>
+
+  <div class="chart-placeholder">
+    <p class="chart-title">Loss 曲线对比 (示意)</p>
+    <div class="chart-visual">
+      <div class="bar">
+        <div class="bar-fill" style="background: #e74c3c; height: 55pt;"></div>
+        <p class="bar-label">HC</p>
+      </div>
+      <div class="bar">
+        <div class="bar-fill" style="background: #40695B; height: 40pt;"></div>
+        <p class="bar-label">mHC</p>
+      </div>
+      <div class="bar">
+        <div class="bar-fill" style="background: #666666; height: 45pt;"></div>
+        <p class="bar-label">Baseline</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <p class="insight-text"><b>结论：</b>mHC 在不同模型架构和规模上都展现出稳定性优势，验证了方法的通用性。</p>
+  </div>
+</div>
+</body>
+</html>

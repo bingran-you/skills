@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 18pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 10pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.intro {
+  color: #333333; font-size: 11pt; margin-bottom: 10pt;
+}
+.diagram-box {
+  background: #181B24; padding: 15pt; border-radius: 6pt; margin: 10pt 0;
+}
+.diagram-row {
+  display: flex; align-items: center; margin: 8pt 0;
+}
+.phase-label {
+  color: #B165FB; font-size: 10pt; width: 80pt;
+}
+.phase-blocks {
+  display: flex; gap: 4pt; flex: 1;
+}
+.block {
+  padding: 6pt 8pt; border-radius: 4pt; font-size: 9pt; text-align: center;
+}
+.block-compute { background: #40695B; color: #ffffff; }
+.block-store { background: #B165FB; color: #ffffff; }
+.block-discard { background: #444; color: #888; text-decoration: line-through; }
+.block-recompute { background: #e74c3c; color: #ffffff; }
+.arrow-down {
+  text-align: center; color: #666; font-size: 14pt; margin: 4pt 0;
+}
+.benefit-grid {
+  display: flex; gap: 10pt; margin: 10pt 0;
+}
+.benefit-box {
+  flex: 1; background: #f5f5f7; padding: 10pt; border-radius: 6pt;
+  text-align: center;
+}
+.benefit-title {
+  color: #181B24; font-size: 11pt; font-weight: bold; margin-bottom: 4pt;
+}
+.benefit-desc {
+  color: #666666; font-size: 9pt;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>选择性重计算 (Recomputing)</h1>
+  </div>
+
+  <p class="intro">经典的时间换空间策略：不存储中间激活，反向传播时重新计算。</p>
+
+  <div class="diagram-box">
+    <div class="diagram-row">
+      <p class="phase-label">前向传播</p>
+      <div class="phase-blocks">
+        <div class="block block-compute"><p style="margin:0;">Layer 1</p></div>
+        <div class="block block-compute"><p style="margin:0;">Layer 2</p></div>
+        <div class="block block-compute"><p style="margin:0;">...</p></div>
+        <div class="block block-compute"><p style="margin:0;">Layer N</p></div>
+        <div class="block block-store"><p style="margin:0;">输出</p></div>
+      </div>
+    </div>
+    <p class="arrow-down">↓ 丢弃 mHC 中间激活</p>
+    <div class="diagram-row">
+      <p class="phase-label">反向传播</p>
+      <div class="phase-blocks">
+        <div class="block block-recompute"><p style="margin:0;">重算 L1</p></div>
+        <div class="block block-recompute"><p style="margin:0;">重算 L2</p></div>
+        <div class="block block-recompute"><p style="margin:0;">...</p></div>
+        <div class="block block-recompute"><p style="margin:0;">重算 LN</p></div>
+        <div class="block block-compute"><p style="margin:0;">梯度</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="benefit-grid">
+    <div class="benefit-box">
+      <p class="benefit-title">显存节省</p>
+      <p class="benefit-desc">不存储 Sinkhorn 迭代的<br>中间结果，大幅降低峰值显存</p>
+    </div>
+    <div class="benefit-box">
+      <p class="benefit-title">最优块大小</p>
+      <p class="benefit-desc">推导出理论最优的重计算<br>块大小，最小化内存占用</p>
+    </div>
+    <div class="benefit-box">
+      <p class="benefit-title">计算开销可控</p>
+      <p class="benefit-desc">mHC 的重计算开销小，<br>整体训练时间增加有限</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

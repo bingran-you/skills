@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 20pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 8pt;
+}
+h1 {
+  color: #181B24; font-size: 20pt; margin: 0;
+}
+.timeline {
+  margin: 6pt 0;
+}
+.timeline-item {
+  display: flex; align-items: flex-start; margin: 5pt 0;
+}
+.year-badge {
+  background: #B165FB; color: #ffffff; padding: 3pt 6pt;
+  border-radius: 4pt; font-size: 10pt; font-weight: bold;
+  min-width: 45pt; text-align: center; margin-right: 10pt;
+}
+.event-box {
+  flex: 1; background: #f5f5f7; padding: 6pt 8pt; border-radius: 6pt;
+}
+.event-title {
+  color: #181B24; font-size: 11pt; font-weight: bold; margin-bottom: 2pt;
+}
+.event-desc {
+  color: #666666; font-size: 9pt; line-height: 1.2;
+}
+.quote-box {
+  background: #181B24; padding: 8pt 10pt; border-radius: 6pt; margin-top: 6pt;
+}
+.quote-text {
+  color: #ffffff; font-size: 10pt; font-style: italic;
+}
+.highlight {
+  color: #B165FB;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>技术演进史：十年接力</h1>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="year-badge"><p style="margin:0;">2015</p></div>
+      <div class="event-box">
+        <p class="event-title">何恺明提出 ResNet 残差连接</p>
+        <p class="event-desc">在微软亚洲研究院提出，解决了深度网络梯度消失问题，获CVPR 2016最佳论文奖</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="year-badge"><p style="margin:0;">2017</p></div>
+      <div class="event-box">
+        <p class="event-title">Transformer 问世</p>
+        <p class="event-desc">残差连接成为标配，从GPT到Claude，从Llama到DeepSeek，几乎所有主流大模型都建立在此基础上</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="year-badge" style="background: #e74c3c;"><p style="margin:0;">2024.9</p></div>
+      <div class="event-box">
+        <p class="event-title">字节跳动发表 Hyper-Connections</p>
+        <p class="event-desc">将单一残差流扩展为多流并行架构，MoE模型上实现1.8倍收敛加速，但训练变得不稳定</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="year-badge" style="background: #40695B;"><p style="margin:0;">2026.1</p></div>
+      <div class="event-box">
+        <p class="event-title">DeepSeek 发布 mHC</p>
+        <p class="event-desc">解决HC的稳定性问题，通过流形约束恢复恒等映射属性</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-box">
+    <p class="quote-text">「从何恺明到字节再到DeepSeek，这是一场<span class="highlight">跨越十年的接力</span>」</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>刚刚，梁文锋署名，DeepSeek元旦新论文要开启架构新篇章</h1></div>
+  <div class="content">
+    <p class="text">其中 1_n 表示全 1 的 n 维向量。</p>
+<p class="text">为什么选择双拟随机性？因为其具有多项有利于大规模训练的理论属性：</p>
+<p class="text">范数保持 ：其谱范数有界且不超过 1（即 ），这意味着学习到的映射是非扩张的，可有效缓解梯度爆炸问题。</p>
+<p class="text">复合封闭性 ：双拟随机矩阵集对矩阵乘法具有封闭性，确保了跨多层的复合残差映射仍保持双拟随机，从而可在整个模型深度上维持稳定性。</p>
+<p class="text">几何解释 ：该集合构成了 Birkhoff 多胞形，是排列矩阵集的凸包。这意味着残差映射充当了排列的凸组合，其重复应用会单调地增加跨流的信息混合，起到鲁棒的特征融合作用。</p>
+  </div>
+</div>
+</body>
+</html>

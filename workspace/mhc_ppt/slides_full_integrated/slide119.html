@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">在第 3000 步时，一个进入 HC 网络的信号在输出时被放大了 532 倍。而同样的信号经过 mHC 输出时倍率为 1.000003 倍，本质上保持不变。</p>
+<p class="text">LayerNorm 和非线性模块似乎「收拾」了大部分烂摊子，但这意味著它们消耗了模型容量，仅仅是为了去抵消上游制造的混乱。</p>
+<p class="text">这正是守恒定律的体现，它表明残差连接应当保持信号的幅度：输入了什么，就应当输出什么（再加上学习到的残差）。</p>
+<p class="text">HC 打破了这一规则，任由信号失控螺旋上升，而 mHC 则守住了底线。</p>
+<p class="text">压力测试</p>
+  </div>
+</div>
+</body>
+</html>

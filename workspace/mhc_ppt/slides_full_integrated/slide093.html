@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">HC 在原始性能上获胜：验证损失 0.88 对 1.12。在 10M 参数下，mHC 约束就像是一种稳定性税；你付出的是表达能力。但在 27B 参数下，这种税是防止你的模型爆炸成 NaN 的唯一手段。</p>
+<p class="text">但看看方差。HC 的损失在不同种子间的变化是 mHC 的 3 倍（±0.033 vs ±0.012）。至于 Amax？HC 根据种子的不同在 6.1 到 7.6 之间摆动。mHC 是 1.00。每一个种子。每一次运行。零方差。</p>
+<p class="text">在 10M 参数下，这种不稳定性是可以存活的。HC 仍然获胜。但在 27B 参数下，那 6-7 倍的放大变成了 3000 倍。在这个规模下你无法赌博。</p>
+<p class="text">深度扩展</p>
+  </div>
+</div>
+</body>
+</html>

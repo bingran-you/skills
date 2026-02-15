@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #40695B;
+}
+.content {
+  margin: 15pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #40695B; padding-left: 15pt; margin-bottom: 6pt;
+}
+h1 {
+  color: #181B24; font-size: 20pt; margin: 0;
+}
+.intro {
+  color: #333333; font-size: 10pt; margin-bottom: 6pt;
+}
+.algorithm-box {
+  background: #181B24; padding: 8pt 12pt; border-radius: 6pt; margin: 6pt 0;
+}
+.step-row {
+  display: flex; align-items: center; margin: 4pt 0;
+}
+.step-num {
+  background: #B165FB; color: #ffffff; width: 18pt; height: 18pt;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 9pt; font-weight: bold; margin-right: 8pt;
+}
+.step-text {
+  color: #ffffff; font-size: 10pt;
+}
+.step-formula {
+  color: #B165FB; font-family: monospace;
+}
+.feature-grid {
+  display: flex; gap: 8pt; margin: 6pt 0;
+}
+.feature-box {
+  flex: 1; background: #f0fff0; border: 1pt solid #40695B;
+  padding: 6pt; border-radius: 6pt; text-align: center;
+}
+.feature-title {
+  color: #40695B; font-size: 10pt; font-weight: bold; margin-bottom: 2pt;
+}
+.feature-text {
+  color: #666666; font-size: 8pt;
+}
+.key-point {
+  background: #40695B; color: #ffffff; padding: 6pt 10pt;
+  border-radius: 6pt;
+}
+.key-text {
+  font-size: 9pt;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>Sinkhorn-Knopp 算法</h1>
+  </div>
+
+  <p class="intro">如何把任意矩阵转换成双随机矩阵？答案是经典的 <b>Sinkhorn-Knopp</b> 迭代算法：</p>
+
+  <div class="algorithm-box">
+    <div class="step-row">
+      <div class="step-num"><p style="margin:0;">1</p></div>
+      <p class="step-text">取指数：<span class="step-formula">A = exp(W)</span> 确保所有元素非负</p>
+    </div>
+    <div class="step-row">
+      <div class="step-num"><p style="margin:0;">2</p></div>
+      <p class="step-text">行归一化：<span class="step-formula">A = A / sum(A, dim=1)</span> 每行和为1</p>
+    </div>
+    <div class="step-row">
+      <div class="step-num"><p style="margin:0;">3</p></div>
+      <p class="step-text">列归一化：<span class="step-formula">A = A / sum(A, dim=0)</span> 每列和为1</p>
+    </div>
+    <div class="step-row">
+      <div class="step-num"><p style="margin:0;">4</p></div>
+      <p class="step-text">重复步骤 2-3，直到收敛（通常 <b>3 次迭代</b>即可）</p>
+    </div>
+  </div>
+
+  <div class="feature-grid">
+    <div class="feature-box">
+      <p class="feature-title">计算高效</p>
+      <p class="feature-text">仅需矩阵-向量乘法<br>3次迭代达到精度</p>
+    </div>
+    <div class="feature-box">
+      <p class="feature-title">可微分</p>
+      <p class="feature-text">整个过程可自动求导<br>支持端到端训练</p>
+    </div>
+    <div class="feature-box">
+      <p class="feature-title">数值稳定</p>
+      <p class="feature-text">指数和归一化都是<br>数值上稳定的操作</p>
+    </div>
+    <div class="feature-box">
+      <p class="feature-title">保证收敛</p>
+      <p class="feature-text">有数学证明<br>一定收敛到双随机矩阵</p>
+    </div>
+  </div>
+
+  <div class="key-point">
+    <p class="key-text"><b>实现简洁：</b>整个 Sinkhorn 投影仅需约 <b>10 行代码</b>，却能带来显著的稳定性提升！</p>
+  </div>
+</div>
+</body>
+</html>

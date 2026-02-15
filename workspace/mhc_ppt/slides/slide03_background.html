@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 30pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 15pt;
+}
+h1 {
+  color: #181B24; font-size: 24pt; margin: 0;
+}
+.formula-box {
+  background: #181B24; padding: 15pt 25pt; border-radius: 8pt;
+  text-align: center; margin: 12pt 0;
+}
+.formula {
+  color: #B165FB; font-size: 28pt; font-weight: bold;
+}
+.text-block {
+  color: #333333; font-size: 14pt; line-height: 1.5;
+  margin-bottom: 10pt;
+}
+.highlight-box {
+  background: #f5f5f7; border-left: 4pt solid #40695B;
+  padding: 12pt; margin: 12pt 0;
+}
+.quote {
+  color: #666666; font-style: italic; font-size: 12pt;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>背景：残差连接的局限</h1>
+  </div>
+  <p class="text-block">传统的残差连接（即 Transformer 中的结构）凭借「恒等映射」保证了信号无损传输和训练稳定性。</p>
+  <div class="formula-box">
+    <p class="formula">x + F(x)</p>
+  </div>
+  <p class="text-block">但它的瓶颈在于：<b>信息通道的宽度受限于隐藏层维度 C</b>。</p>
+  <div class="highlight-box">
+    <p class="quote">GPT、Claude、Llama、Gemini...在底层，它们做的事情都是一样的：x + F(x)。</p>
+    <p class="quote">信息流只有一条，穿过网络，每一层都向其中添加内容。</p>
+    <p class="quote" style="margin-top: 8pt; color: #40695B; font-weight: bold;">这是何恺明2015年提出的方法，十年未曾改变。</p>
+  </div>
+</div>
+</body>
+</html>

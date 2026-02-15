@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">第 0 层是「金丝雀」（预警指标）。特别密切关注你的输入混合矩阵。如果你的基础模型有一个不稳定的第 0 层，微调期间的词表变更或 Embedding 漂移可能会导致网络不稳定。</p>
+<p class="text">该约束没有性能代价。mHC 的 Loss 与 HC 完全一致。</p>
+<p class="text">代码和数据</p>
+<p class="text">数据是公开的，代码即将发布。</p>
+<p class="text">主要实验: wandb.ai/taylorkolasinski/mhc-part2</p>
+<p class="text">压力测试: wandb.ai/taylorkolasinski/mhc-part2-stress</p>
+  </div>
+</div>
+</body>
+</html>

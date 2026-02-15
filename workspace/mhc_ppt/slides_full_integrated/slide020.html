@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>刚刚，梁文锋署名，DeepSeek元旦新论文要开启架构新篇章</h1></div>
+  <div class="content">
+    <p class="text">在单个算子中实现 Sinkhorn-Knopp 迭代及其自定义反向传播。</p>
+<p class="text">将 和 的应用与残差合并融合，显著减少了内存读写量。</p>
+<p class="text">重计算 (Recomputing)：</p>
+<p class="text">为了减轻 n 流设计带来的内存压力，DeepSeek 在前向传播后丢弃 mHC 算子的中间激活，并在反向传播时即时重新计算。</p>
+<p class="text">通过推导得出最优重计算块大小 L_r^*，以最小化总内存占用。</p>
+<p class="text">DualPipe 中的通信重叠：</p>
+<p class="text">扩展了 DualPipe 调度算法，以改善流水线并行阶段边界处的通信与计算重叠在专用高优先级计算流上执行 MLP 层的内核，并避免在注意力层使用持久算子，以防止阻塞通信流并提高设备利用率。</p>
+<p class="text">实验</p>
+  </div>
+</div>
+</body>
+</html>

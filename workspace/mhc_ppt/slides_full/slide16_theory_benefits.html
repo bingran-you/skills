@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #40695B;
+}
+.content {
+  margin: 15pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #40695B; padding-left: 15pt; margin-bottom: 8pt;
+}
+h1 {
+  color: #181B24; font-size: 20pt; margin: 0;
+}
+.benefit-list {
+  margin: 8pt 0;
+}
+.benefit-item {
+  display: flex; margin: 6pt 0; background: #f5f5f7;
+  border-radius: 6pt; overflow: hidden;
+}
+.benefit-num {
+  background: #40695B; color: #ffffff; padding: 10pt 12pt;
+  font-size: 16pt; font-weight: bold; display: flex;
+  align-items: center; justify-content: center;
+}
+.benefit-content {
+  padding: 8pt 10pt; flex: 1;
+}
+.benefit-title {
+  color: #181B24; font-size: 11pt; font-weight: bold; margin-bottom: 2pt;
+}
+.benefit-desc {
+  color: #666666; font-size: 9pt; line-height: 1.3;
+}
+.summary-box {
+  background: #181B24; padding: 10pt 12pt; border-radius: 6pt;
+}
+.summary-text {
+  color: #ffffff; font-size: 10pt; line-height: 1.4;
+}
+.highlight {
+  color: #B165FB;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>理论优势总结</h1>
+  </div>
+
+  <div class="benefit-list">
+    <div class="benefit-item">
+      <div class="benefit-num"><p style="margin:0;">1</p></div>
+      <div class="benefit-content">
+        <p class="benefit-title">范数保持 (Norm Preservation)</p>
+        <p class="benefit-desc">双随机矩阵的谱范数有界 ≤ 1，确保信号不会被放大，有效缓解梯度爆炸问题。</p>
+      </div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-num"><p style="margin:0;">2</p></div>
+      <div class="benefit-content">
+        <p class="benefit-title">复合封闭性 (Composition Closure)</p>
+        <p class="benefit-desc">两个双随机矩阵相乘，结果仍是双随机矩阵。保证了跨多层的稳定性。</p>
+      </div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-num"><p style="margin:0;">3</p></div>
+      <div class="benefit-content">
+        <p class="benefit-title">几何解释 (Geometric Interpretation)</p>
+        <p class="benefit-desc">双随机矩阵充当排列矩阵的凸组合，实现鲁棒的特征融合。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <p class="summary-text">mHC 的理论贡献：证明了在满足双随机约束的条件下，<span class="highlight">多流架构可以在不牺牲表达能力的前提下获得与单流残差连接相同的稳定性保证</span>。</p>
+  </div>
+</div>
+</body>
+</html>

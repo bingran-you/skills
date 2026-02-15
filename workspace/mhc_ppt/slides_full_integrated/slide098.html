@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">流持久性 Bug 让人学会谦卑 。作者的第一个实现看起来是对的。公式与论文相符。代码能跑。但当把输出投影回单一流并在每一层重新扩展它，扼杀了并行架构。「超连接」中的「超」部分实际上没做任何事。三次独立的审计都说「看起来是对的」。Bug 是架构上的，不是数学上的。作者是在问了「等等，层与层之间流动的实际形状是什么？」之后才发现的。</p>
+<p class="text">约束不是限制；它们是保证 。双重随机投影强制了稳定性。你不是在学习好的行为。你是在让坏的行为变得不可能。作者表示自己的第一反应是：「这不优雅。这是束缚。」但其实，HC 达到了 7 倍放大才是重点。</p>
+  </div>
+</div>
+</body>
+</html>

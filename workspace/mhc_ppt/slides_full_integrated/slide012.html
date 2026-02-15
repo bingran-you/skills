@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>刚刚，梁文锋署名，DeepSeek元旦新论文要开启架构新篇章</h1></div>
+  <div class="content">
+    <p class="text">虽然原始的恒等映射是通过强制执行 来确保稳定性，但它能从根本上阻止残差流内部的信息交换，而这种交换对于最大化多流架构的潜力至关重要。</p>
+<p class="text">因此，该 DeepSeek 团队提出 将残差映射投影到一个流形上 ，既能保持跨层信号传播的稳定性，又能促进残差流之间的相互作用，以保持模型的表达能力（expressivity）。</p>
+<p class="text">为此，他们的做法是将 限制为 双拟随机矩阵 （Doubly Stochastic Matrix），即具有非负项且行和与列和均为 1 的矩阵。</p>
+<p class="text">形式上，令 表示双拟随机矩阵的流形（也称为 Birkhoff 多胞形），再将 约束在 中，定义为：</p>
+  </div>
+</div>
+</body>
+</html>

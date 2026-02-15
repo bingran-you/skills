@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header {
+  background: #181B24; height: 54pt; display: flex;
+  align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB;
+}
+.header h1 { color: #ffffff; font-size: 24pt; margin: 0; }
+.content { padding: 16pt 24pt; }
+.columns { display: flex; gap: 18pt; }
+.col { flex: 1; }
+li { font-size: 13.5pt; color: #333333; line-height: 1.4; }
+ul { margin: 0; padding-left: 16pt; }
+.image-box { background: #ffffff; padding: 6pt; border: 1pt solid #DDDDDD; }
+.image-box img { width: 300pt; height: 250pt; object-fit: contain; }
+.caption { font-size: 10pt; color: #666666; margin: 6pt 0 0 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>复现进展：社区验证</h1></div>
+  <div class="content">
+    <div class="columns">
+      <div class="col">
+        <div class="image-box">
+          <img src="../assets/handdrawn_repro.png" />
+          <p class="caption">社区复现笔记与结构草图</p>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li>FlowMode 工程师 Taylor Kolasinski 宣布成功复现 mHC</li>
+          <li>使用 8×H100 节点进行训练实验，并发布两篇复现博客</li>
+          <li>观察到 HC 在大规模训练中不稳定性显著增加</li>
+          <li>mHC 在稳定性上明显更好，且 Loss 表现接近</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

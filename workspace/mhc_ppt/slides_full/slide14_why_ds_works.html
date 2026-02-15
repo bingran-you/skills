@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #40695B;
+}
+.content {
+  margin: 25pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #40695B; padding-left: 15pt; margin-bottom: 10pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.reason-grid {
+  display: flex; gap: 10pt; margin: 10pt 0;
+}
+.reason-card {
+  flex: 1; background: #f0fff0; border-left: 4pt solid #40695B;
+  padding: 10pt; border-radius: 0 6pt 6pt 0;
+}
+.reason-title {
+  color: #40695B; font-size: 12pt; font-weight: bold; margin-bottom: 6pt;
+}
+.reason-text {
+  color: #333333; font-size: 10pt; line-height: 1.4;
+}
+.formula-box {
+  background: #181B24; padding: 12pt 15pt; border-radius: 6pt; margin: 10pt 0;
+  text-align: center;
+}
+.formula {
+  color: #B165FB; font-size: 16pt; font-weight: bold; font-family: Georgia, serif;
+}
+.formula-desc {
+  color: #888888; font-size: 10pt; margin-top: 6pt;
+}
+.key-insight {
+  background: #40695B; color: #ffffff; padding: 10pt 12pt;
+  border-radius: 6pt; margin-top: 8pt;
+}
+.key-text {
+  font-size: 11pt; line-height: 1.4;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>为什么双随机矩阵有效？</h1>
+  </div>
+
+  <div class="reason-grid">
+    <div class="reason-card">
+      <p class="reason-title">凸组合特性</p>
+      <p class="reason-text">输出是输入各分量的<b>加权平均</b>（凸组合），结果不会超过输入的最大值。</p>
+      <p class="reason-text" style="margin-top: 4pt;">信号不会被无限放大！</p>
+    </div>
+    <div class="reason-card">
+      <p class="reason-title">能量守恒</p>
+      <p class="reason-text">行和=1 保证每个输出是"公平分配"，列和=1 保证每个输入被"完整使用"。</p>
+      <p class="reason-text" style="margin-top: 4pt;">信息不会凭空产生或消失。</p>
+    </div>
+    <div class="reason-card">
+      <p class="reason-title">谱范数有界</p>
+      <p class="reason-text">双随机矩阵的谱范数（最大奇异值）恒 ≤ 1。变换是"非扩张的"。</p>
+      <p class="reason-text" style="margin-top: 4pt;">数学上可证明稳定！</p>
+    </div>
+  </div>
+
+  <div class="formula-box">
+    <p class="formula">||Ax|| ≤ ||x||</p>
+    <p class="formula-desc">对于双随机矩阵 A，输出向量的范数不会超过输入向量的范数</p>
+  </div>
+
+  <div class="key-insight">
+    <p class="key-text"><b>关键洞察：</b>双随机矩阵本质上是一种"排列的凸组合"——它可以任意混合和重排信息，但永远不会放大信号。这正是恒等映射所需要的核心属性！</p>
+  </div>
+</div>
+</body>
+</html>

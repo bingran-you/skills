@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #40695B;
+}
+.content {
+  margin: 18pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #40695B; padding-left: 15pt; margin-bottom: 10pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.two-col {
+  display: flex; gap: 15pt; margin: 8pt 0;
+}
+.col-left {
+  flex: 1.2;
+}
+.col-right {
+  flex: 0.8;
+}
+.property-list {
+  background: #f5f5f7; padding: 10pt 12pt; border-radius: 6pt;
+}
+.property-item {
+  display: flex; align-items: center; margin: 6pt 0;
+}
+.property-num {
+  background: #40695B; color: #ffffff; width: 18pt; height: 18pt;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 10pt; font-weight: bold; margin-right: 10pt;
+}
+.property-text {
+  color: #333333; font-size: 11pt;
+}
+.matrix-example {
+  background: #181B24; padding: 12pt; border-radius: 6pt; text-align: center;
+}
+.matrix-label {
+  color: #B165FB; font-size: 10pt; margin-bottom: 6pt;
+}
+.matrix-grid {
+  display: inline-block; color: #ffffff; font-family: monospace; font-size: 12pt;
+}
+.matrix-row {
+  display: flex; justify-content: center;
+}
+.matrix-cell {
+  width: 40pt; text-align: center; padding: 4pt;
+}
+.sum-row {
+  color: #40695B; font-size: 10pt; margin-top: 6pt;
+}
+.insight-box {
+  background: #40695B; color: #ffffff; padding: 10pt 12pt;
+  border-radius: 6pt; margin-top: 8pt;
+}
+.insight-text {
+  font-size: 11pt; line-height: 1.4;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>双随机矩阵的定义</h1>
+  </div>
+
+  <div class="two-col">
+    <div class="col-left">
+      <div class="property-list">
+        <p style="color: #181B24; font-size: 12pt; font-weight: bold; margin-bottom: 8pt;">双随机矩阵的三个性质：</p>
+        <div class="property-item">
+          <div class="property-num"><p style="margin:0;">1</p></div>
+          <p class="property-text">所有元素 <b>非负</b>（≥ 0）</p>
+        </div>
+        <div class="property-item">
+          <div class="property-num"><p style="margin:0;">2</p></div>
+          <p class="property-text">每一<b>行</b>的元素加起来 = 1</p>
+        </div>
+        <div class="property-item">
+          <div class="property-num"><p style="margin:0;">3</p></div>
+          <p class="property-text">每一<b>列</b>的元素加起来 = 1</p>
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <p class="insight-text"><b>数学直觉：</b>双随机矩阵把输入"重新分配"到输出，但总量不变。就像把一杯水倒入多个杯子，每个杯子得到一定比例，但水的总量不会增加。</p>
+      </div>
+    </div>
+
+    <div class="col-right">
+      <div class="matrix-example">
+        <p class="matrix-label">示例：3×3 双随机矩阵</p>
+        <div class="matrix-grid">
+          <div class="matrix-row">
+            <div class="matrix-cell"><p style="margin:0;">0.5</p></div>
+            <div class="matrix-cell"><p style="margin:0;">0.3</p></div>
+            <div class="matrix-cell"><p style="margin:0;">0.2</p></div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell"><p style="margin:0;">0.2</p></div>
+            <div class="matrix-cell"><p style="margin:0;">0.5</p></div>
+            <div class="matrix-cell"><p style="margin:0;">0.3</p></div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell"><p style="margin:0;">0.3</p></div>
+            <div class="matrix-cell"><p style="margin:0;">0.2</p></div>
+            <div class="matrix-cell"><p style="margin:0;">0.5</p></div>
+          </div>
+        </div>
+        <p class="sum-row">行和 = 列和 = 1 ✓</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

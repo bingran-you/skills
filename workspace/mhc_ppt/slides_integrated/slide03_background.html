@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header {
+  background: #181B24; height: 54pt; display: flex;
+  align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB;
+}
+.header h1 { color: #ffffff; font-size: 24pt; margin: 0; }
+.content { padding: 20pt 30pt; }
+.columns { display: flex; gap: 24pt; }
+.col { flex: 1; }
+h2 { font-size: 18pt; color: #181B24; margin: 0 0 10pt 0; }
+li { font-size: 13.5pt; color: #333333; line-height: 1.4; }
+ul { margin: 0; padding-left: 16pt; }
+.image-box { background: #ffffff; padding: 8pt; border: 1pt solid #DDDDDD; }
+.image-box img { width: 300pt; height: 180pt; object-fit: cover; }
+.caption { font-size: 10pt; color: #666666; margin: 6pt 0 0 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>背景：残差连接 → 超连接</h1></div>
+  <div class="content">
+    <div class="columns">
+      <div class="col">
+        <h2>技术演进脉络</h2>
+        <ul>
+          <li>2015 年 ResNet 提出残差连接：y = x + F(x)，让深层网络可训练</li>
+          <li>2017 年 Transformer 继承残差连接，成为大模型“地基”</li>
+          <li>2024 年 Hyper-Connections（HC）扩展为多流并行，性能更强</li>
+          <li>但 HC 破坏恒等映射，带来训练不稳定与信号爆炸风险</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="image-box">
+          <img src="../assets/city_illustration.jpg" />
+          <p class="caption">“从单车道到多车道”的架构隐喻</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

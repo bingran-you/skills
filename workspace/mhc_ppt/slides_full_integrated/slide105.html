@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">首先，在 Loss 表现上：所有方法的收敛表现几乎一致。</p>
+<p class="text">三种方法最终都收敛到相近的 loss 区间（约 5.4–6.0）。整体学习曲线几乎完全重合：HC 并没有学得更快，mHC 也没有变慢。从实验结果来看，引入 Sinkhorn 投影几乎没有额外代价。</p>
+<p class="text">其次，Amax 表现出强烈的不稳定性。Amax 是用来衡量混合矩阵对信号的放大程度，Amax = 1.0 表示对信号不放大（中性）；数值越高，表示信号被放大的程度越强。</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 30pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 12pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.two-col {
+  display: flex; gap: 15pt; margin: 12pt 0;
+}
+.col {
+  flex: 1;
+}
+.problem-box {
+  background: #fff5f5; border: 2pt solid #e74c3c; padding: 12pt;
+  border-radius: 8pt; height: 100%;
+}
+.solution-box {
+  background: #f0fff0; border: 2pt solid #40695B; padding: 12pt;
+  border-radius: 8pt; height: 100%;
+}
+.box-title {
+  font-size: 14pt; font-weight: bold; margin-bottom: 8pt;
+}
+.box-content {
+  font-size: 12pt; line-height: 1.4;
+}
+.quote-box {
+  background: #f5f5f5; padding: 10pt; border-radius: 6pt;
+  margin-top: 10pt; border-left: 4pt solid #999999;
+}
+.quote-text {
+  font-style: italic; font-size: 11pt; color: #666666;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>复现实验细节：HC爆炸 vs mHC稳定</h1>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="problem-box">
+        <p class="box-title" style="color: #e74c3c;">HC: 信号爆炸</p>
+        <p class="box-content">在激进的学习率下，作者的复现实验中超连接（HC）的信号放大达到了 <b>7 倍</b>，随后最终崩溃。</p>
+        <p class="box-content" style="margin-top: 8pt;">Amax（行和列绝对值的最大值）衡量了一个矩阵能将信号放大多少。</p>
+        <div class="quote-box">
+          <p class="quote-text">「Amax 增益幅度产生了极值，峰值达到 3000」— DeepSeek 在 27B 参数下观察到的情况</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="solution-box">
+        <p class="box-title" style="color: #40695B;">mHC: 保持稳定</p>
+        <p class="box-content">mHC 通过将连接矩阵约束在双拟随机矩阵流形上，从数学上保证了信号的稳定传播。</p>
+        <p class="box-content" style="margin-top: 8pt;">即使在极端条件下（10924倍信号放大），mHC 依然保持训练稳定。</p>
+        <div class="quote-box" style="border-left-color: #40695B;">
+          <p class="quote-text" style="color: #40695B;">「这就是为什么 Transformer 可以深达数百层：梯度有一条干净的向后路径。简单。稳定。」</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

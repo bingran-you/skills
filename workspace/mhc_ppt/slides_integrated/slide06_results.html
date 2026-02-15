@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header {
+  background: #181B24; height: 54pt; display: flex;
+  align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB;
+}
+.header h1 { color: #ffffff; font-size: 24pt; margin: 0; }
+.content { padding: 16pt 24pt; }
+.columns { display: flex; gap: 18pt; }
+.col { flex: 1; }
+li { font-size: 13.5pt; color: #333333; line-height: 1.4; }
+ul { margin: 0; padding-left: 16pt; }
+.image-box { background: #ffffff; padding: 6pt; border: 1pt solid #DDDDDD; }
+.image-box img { width: 360pt; height: 250pt; object-fit: contain; }
+.caption { font-size: 10pt; color: #666666; margin: 6pt 0 0 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>实验结果：稳定性对比</h1></div>
+  <div class="content">
+    <div class="columns">
+      <div class="col">
+        <ul>
+          <li>复现实验显示：不同随机种子下的 Loss 曲线高度一致</li>
+          <li>HC 在训练中容易积累不稳定，mHC 更平稳</li>
+          <li>整体收敛速度接近，约束几乎不增加训练成本</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="image-box">
+          <img src="../assets/loss_curves.png" />
+          <p class="caption">HC vs mHC 的训练曲线对比（复现）</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

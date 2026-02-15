@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">HC 打破了守恒；mHC 恢复了它，不是通过回归到恒等映射，而是通过找到一个更丰富的、仍然守恒信号的流形。</p>
+<p class="text">2016 年，何恺明等人引入 ResNets 来解决梯度消失问题，确保信号不会消亡。十年后，相反的问题出现了：超连接带来的信号爆炸。恒等映射通过被动的方式解决了第一个问题。mHC 通过强制守恒解决了第二个问题。</p>
+<p class="text">每一个残差连接都是一种守恒定律。mHC 强制执行了它。</p>
+<p class="text">不是黑客手段，不是技巧。这是一个原则性的约束，使架构能在规模化下工作。</p>
+<p class="text">要点总结</p>
+  </div>
+</div>
+</body>
+</html>

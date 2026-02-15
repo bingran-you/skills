@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">这里有一个令人惊讶的发现： 不稳定性始于输入端，而非输出端 。</p>
+<p class="text">HC 的第 0 层（可视化图表中的顶行）率先变红，随后其混合矩阵在训练初期就突破了 Amax 2.0，而更深层的网络则保持相对稳定。看起来问题不在于深度，而在于第 0 层 —— 这是唯一一层直接吞吐原始输入的层。</p>
+<p class="text">为什么是第 0 层？ 不同于深层网络前面有 LayerNorm 把关，第一个混合矩阵直接面对原始 Embeddings。其他每一层看到的都是经过归一化、变换后的表征，但第 0 层必须硬抗 Embedding 表吐出的任何数值。如果尺度（scale）没有完美匹配，第 0 层就会学习去补偿。</p>
+  </div>
+</div>
+</body>
+</html>

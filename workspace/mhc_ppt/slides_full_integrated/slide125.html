@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">有一个作者没想到的结果：所有的 HC（Hyper-Connections）运行实验都没有崩溃。</p>
+<p class="text">信号放大了 14765 倍，在深度 32 时放大了 10924 倍。Loss（损失）没有发散，训练也没有出现 NaN。模型仍在继续学习。</p>
+<p class="text">这是一种「定时炸弹」般的场景。不稳定性确实存在，但尚未导致灾难性的失败…… 至少目前还没有。</p>
+<p class="text">为什么没炸？作者列举了以下几种可能性：</p>
+<p class="text">梯度裁剪力挽狂澜 。将范数裁剪在 1.0 防止了最严重的梯度爆炸，这几乎肯定就是拯救了这次运行的关键。</p>
+<p class="text">5000 步还不够 。如果训练时间再长一点，它可能就会爆发。</p>
+  </div>
+</div>
+</body>
+</html>

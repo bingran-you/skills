@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 25pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 12pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.two-col {
+  display: flex; gap: 15pt; margin: 10pt 0;
+}
+.col {
+  flex: 1;
+}
+.concept-box {
+  background: #40695B; color: #ffffff; padding: 12pt;
+  border-radius: 6pt; margin-bottom: 10pt;
+}
+.concept-title {
+  font-size: 14pt; font-weight: bold; margin-bottom: 6pt;
+}
+.concept-text {
+  font-size: 10pt; line-height: 1.4;
+}
+.analogy-box {
+  background: #f5f5f7; padding: 12pt; border-radius: 6pt;
+}
+.analogy-title {
+  color: #181B24; font-size: 12pt; font-weight: bold; margin-bottom: 6pt;
+}
+.analogy-text {
+  color: #666666; font-size: 10pt; line-height: 1.4;
+}
+.quote-box {
+  background: #181B24; padding: 12pt 15pt; border-radius: 6pt; margin-top: 10pt;
+}
+.quote-text {
+  color: #ffffff; font-size: 11pt; font-style: italic; line-height: 1.5;
+}
+.highlight {
+  color: #B165FB;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>恒等映射与能量守恒</h1>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="concept-box">
+        <p class="concept-title">恒等映射 (Identity Mapping)</p>
+        <p class="concept-text">原始残差连接的核心属性：当 F(x)=0 时，y = x + F(x) = x</p>
+        <p class="concept-text" style="margin-top: 6pt;">信号可以<b>无损通过</b>网络层，不被放大也不被缩小。</p>
+      </div>
+      <div class="analogy-box">
+        <p class="analogy-title">物理学类比</p>
+        <p class="analogy-text">就像能量守恒定律：你输入多少，输出就是多少。信号幅度保持稳定，不会指数级增长或衰减。</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="concept-box">
+        <p class="concept-title">为什么恒等映射重要？</p>
+        <p class="concept-text"><b>1. 梯度稳定</b> - 反向传播时梯度不会爆炸或消失</p>
+        <p class="concept-text" style="margin-top: 4pt;"><b>2. 训练深度</b> - 可以训练数百甚至上千层的网络</p>
+        <p class="concept-text" style="margin-top: 4pt;"><b>3. 可预测性</b> - 网络行为更加稳定可控</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-box">
+    <p class="quote-text">「恒等映射就像给神经网络上了一道<span class="highlight">保险丝</span>：无论发生什么，信号都不会无限放大导致整个系统崩溃。」</p>
+  </div>
+</div>
+</body>
+</html>

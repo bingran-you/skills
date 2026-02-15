@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 30pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 12pt;
+}
+h1 {
+  color: #181B24; font-size: 24pt; margin: 0;
+}
+.intro {
+  color: #333333; font-size: 13pt; line-height: 1.4; margin-bottom: 10pt;
+}
+.highlight-name {
+  background: #B165FB; color: #ffffff; padding: 2pt 6pt;
+  border-radius: 3pt; font-weight: bold;
+}
+.core-box {
+  background: #181B24;
+  padding: 15pt; border-radius: 8pt; margin: 12pt 0;
+}
+.core-title {
+  color: #B165FB; font-size: 13pt; margin-bottom: 8pt;
+}
+.core-text {
+  color: #ffffff; font-size: 14pt; line-height: 1.5;
+}
+.feature-list {
+  margin: 12pt 0; padding-left: 20pt;
+}
+.feature-item {
+  color: #333333; font-size: 13pt; line-height: 1.6;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>mHC核心思想</h1>
+  </div>
+  <p class="intro">为了解决这些挑战，DeepSeek 的研究团队提出了 <span class="highlight-name">Manifold-Constrained Hyper-Connections (mHC，流形约束超连接)</span></p>
+  <p class="intro">这是一个通用框架，它将 HC 的残差连接空间投影到一个特定的流形上，以恢复恒等映射属性，同时结合严格的基础设施优化以确保效率。</p>
+
+  <div class="core-box">
+    <p class="core-title">核心目的</p>
+    <p class="core-text">在保留「加宽残差流」带来的性能提升的同时，解决其导致的训练不稳定和显存消耗过大的问题</p>
+  </div>
+
+  <ul class="feature-list">
+    <li class="feature-item">将 HC 的残差连接空间投影到特定流形</li>
+    <li class="feature-item">恢复恒等映射属性，保持跨层信号传播的稳定性</li>
+    <li class="feature-item">促进残差流之间的相互作用，保持模型的表达能力</li>
+  </ul>
+</div>
+</body>
+</html>

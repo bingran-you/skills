@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header {
+  background: #181B24; height: 54pt; display: flex;
+  align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB;
+}
+.header h1 { color: #ffffff; font-size: 24pt; margin: 0; }
+.content { padding: 18pt 30pt; }
+.columns { display: flex; gap: 20pt; }
+.col { flex: 1; }
+li { font-size: 13.5pt; color: #333333; line-height: 1.4; }
+ul { margin: 0; padding-left: 16pt; }
+.callout {
+  background: #ffffff; border-left: 6pt solid #40695B;
+  padding: 14pt 16pt;
+}
+.callout h2 { font-size: 16pt; margin: 0 0 8pt 0; color: #181B24; }
+.callout p { font-size: 12.5pt; margin: 0 0 6pt 0; color: #333333; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>稳定性与系统优化</h1></div>
+  <div class="content">
+    <div class="columns">
+      <div class="col">
+        <ul>
+          <li>双随机约束让信号成为“凸组合”，范数更稳定</li>
+          <li>Sinkhorn-Knopp 迭代次数少且可微分，支持端到端训练</li>
+          <li>论文强调：mHC 旨在保留性能增益并解决不稳定</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="callout">
+          <h2>工程侧改进</h2>
+          <p>内核融合、选择性重计算</p>
+          <p>DualPipe 通信与计算重叠</p>
+          <p>在大规模训练中开销受控且更稳定</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

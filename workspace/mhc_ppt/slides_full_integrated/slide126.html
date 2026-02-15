@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">这些模型还太小 。在 100B（千亿）参数规模下，动力学特性可能会有所不同。</p>
+<p class="text">稳妥的解读是： HC 正在积聚不稳定性，在不同条件下可能会被引爆，而 mHC则完全消除了这种风险 。</p>
+<p class="text">重访守恒定律</p>
+<p class="text">在第 1 部分中，作者将残差连接定义为了一种守恒定律，即「每一个残差连接都是一条守恒定律，mHC 强制执行了它。」</p>
+<p class="text">1.7B 参数规模的结果让这一点变得具体：HC 违反了守恒，信号在训练过程中增长了 10000 多倍。而 mHC 强制守恒，信号保持稳定。具体地，</p>
+<p class="text">在 10M（一千万）参数时，违反守恒是可以存活的。作者在第 1 部分中看到的 9.2 倍放大虽然烦人，但尚在可控范围内。</p>
+  </div>
+</div>
+</body>
+</html>

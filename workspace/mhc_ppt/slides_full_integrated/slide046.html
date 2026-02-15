@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>梁文锋DeepSeek新论文！接棒何恺明和字节，又稳了稳AI的“地基”</h1></div>
+  <div class="content">
+    <p class="text">为什么这个约束有效？因为当信号通过这样的矩阵变换时，输出实际上是输入各分量的凸组合，可以理解为一种“加权平均”。根据数学性质，凸组合的结果不会超过输入的最大值。换句话说，信号不会被无限放大，能量守恒得到保证。</p>
+<p class="text">从数学角度看，双随机矩阵的谱范数恒小于等于1，这意味着对应的线性变换是"非扩张的"——无论前向传播还是反向传播，信号都不会被无限放大。</p>
+<p class="text">具体实现上，DeepSeek采用了经典的Sinkhorn-Knopp算法：对矩阵交替进行行归一化和列归一化，迭代几次就能收敛到双随机矩阵。论文实验表明，仅需3次迭代就能达到足够精度，而且整个过程可微分，支持端到端训练。</p>
+<p class="text">太艰深了？</p>
+  </div>
+</div>
+</body>
+</html>

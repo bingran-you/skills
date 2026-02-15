@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #40695B;
+}
+.content {
+  margin: 18pt 40pt; width: 100%;
+}
+.section-label {
+  color: #40695B; font-size: 10pt; text-transform: uppercase;
+  letter-spacing: 2pt; margin-bottom: 6pt;
+}
+.title-wrapper {
+  border-left: 6pt solid #40695B; padding-left: 15pt; margin-bottom: 10pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.setup-grid {
+  display: flex; gap: 12pt; margin: 10pt 0;
+}
+.setup-col {
+  flex: 1;
+}
+.setup-box {
+  background: #f5f5f7; padding: 10pt; border-radius: 6pt; margin-bottom: 8pt;
+}
+.setup-title {
+  color: #40695B; font-size: 11pt; font-weight: bold; margin-bottom: 6pt;
+}
+.setup-item {
+  color: #333333; font-size: 10pt; margin: 3pt 0;
+}
+.setup-value {
+  color: #666666;
+}
+.focus-box {
+  background: #181B24; padding: 10pt 12pt; border-radius: 6pt; margin-top: 8pt;
+}
+.focus-text {
+  color: #ffffff; font-size: 11pt;
+}
+.focus-highlight {
+  color: #B165FB; font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <p class="section-label">Part 5: 实验验证</p>
+  <div class="title-wrapper">
+    <h1>DeepSeek 官方实验设置</h1>
+  </div>
+
+  <div class="setup-grid">
+    <div class="setup-col">
+      <div class="setup-box">
+        <p class="setup-title">模型架构</p>
+        <p class="setup-item">类型: <span class="setup-value">MoE (受 DeepSeek-V3 启发)</span></p>
+        <p class="setup-item">专家数: <span class="setup-value">64 个路由专家 + 2 个共享专家</span></p>
+        <p class="setup-item">激活专家: <span class="setup-value">每 token 激活 8 个</span></p>
+      </div>
+      <div class="setup-box">
+        <p class="setup-title">测试规模</p>
+        <p class="setup-item">3B 参数 <span class="setup-value">(基础验证)</span></p>
+        <p class="setup-item">9B 参数 <span class="setup-value">(中等规模)</span></p>
+        <p class="setup-item">27B 参数 <span class="setup-value">(主要关注)</span></p>
+      </div>
+    </div>
+    <div class="setup-col">
+      <div class="setup-box">
+        <p class="setup-title">HC/mHC 配置</p>
+        <p class="setup-item">扩展率 n: <span class="setup-value">4 (4条并行信息流)</span></p>
+        <p class="setup-item">Sinkhorn 迭代: <span class="setup-value">3 次</span></p>
+        <p class="setup-item">精度: <span class="setup-value">BF16 混合精度</span></p>
+      </div>
+      <div class="setup-box">
+        <p class="setup-title">训练数据</p>
+        <p class="setup-item">数据量: <span class="setup-value">2T tokens</span></p>
+        <p class="setup-item">来源: <span class="setup-value">DeepSeek 内部数据集</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="focus-box">
+    <p class="focus-text">实验重点关注 <span class="focus-highlight">27B 参数模型</span>，这是 HC 问题最严重的规模，也是验证 mHC 有效性的关键。</p>
+  </div>
+</div>
+</body>
+</html>

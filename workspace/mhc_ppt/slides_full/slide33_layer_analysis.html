@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 25pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 10pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.finding-box {
+  background: #fff5f5; border: 2pt solid #e74c3c;
+  padding: 10pt 12pt; border-radius: 6pt; margin: 10pt 0;
+}
+.finding-title {
+  color: #e74c3c; font-size: 12pt; font-weight: bold; margin-bottom: 6pt;
+}
+.finding-text {
+  color: #333333; font-size: 11pt; line-height: 1.4;
+}
+.heatmap-container {
+  display: flex; gap: 12pt; margin: 10pt 0;
+}
+.heatmap-card {
+  flex: 1; background: #181B24; padding: 10pt; border-radius: 6pt;
+}
+.heatmap-title {
+  color: #888888; font-size: 10pt; margin-bottom: 8pt; text-align: center;
+}
+.heatmap-grid {
+  display: grid; grid-template-columns: repeat(8, 1fr); gap: 2pt;
+}
+.heatmap-cell {
+  height: 12pt; border-radius: 2pt;
+}
+.cell-red { background: #e74c3c; }
+.cell-orange { background: #f39c12; }
+.cell-yellow { background: #f1c40f; }
+.cell-green { background: #40695B; }
+.layer-label {
+  color: #666666; font-size: 8pt; text-align: center; margin-top: 4pt;
+}
+.explanation-box {
+  background: #40695B; color: #ffffff; padding: 10pt 12pt;
+  border-radius: 6pt; margin-top: 10pt;
+}
+.explanation-text {
+  font-size: 10pt; line-height: 1.4;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>逐层分析发现</h1>
+  </div>
+
+  <div class="finding-box">
+    <p class="finding-title">惊人发现：不稳定性始于第 0 层！</p>
+    <p class="finding-text">通过逐层分析 Amax，Taylor 发现 HC 的不稳定性<b>从输入层（第 0 层）就开始</b>，而不是在深层逐渐累积。原因：第 0 层直接处理原始 Embeddings，<b>没有 LayerNorm 的保护</b>。</p>
+  </div>
+
+  <div class="heatmap-container">
+    <div class="heatmap-card">
+      <p class="heatmap-title">HC 逐层稳定性 (红=不稳定)</p>
+      <div class="heatmap-grid">
+        <div class="heatmap-cell cell-red"></div>
+        <div class="heatmap-cell cell-red"></div>
+        <div class="heatmap-cell cell-orange"></div>
+        <div class="heatmap-cell cell-orange"></div>
+        <div class="heatmap-cell cell-yellow"></div>
+        <div class="heatmap-cell cell-orange"></div>
+        <div class="heatmap-cell cell-red"></div>
+        <div class="heatmap-cell cell-red"></div>
+        <div class="heatmap-cell cell-orange"></div>
+        <div class="heatmap-cell cell-red"></div>
+        <div class="heatmap-cell cell-yellow"></div>
+        <div class="heatmap-cell cell-orange"></div>
+        <div class="heatmap-cell cell-red"></div>
+        <div class="heatmap-cell cell-orange"></div>
+        <div class="heatmap-cell cell-yellow"></div>
+        <div class="heatmap-cell cell-red"></div>
+      </div>
+      <p class="layer-label">Layer 0 → Layer 31</p>
+    </div>
+    <div class="heatmap-card">
+      <p class="heatmap-title">mHC 逐层稳定性 (绿=稳定)</p>
+      <div class="heatmap-grid">
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+        <div class="heatmap-cell cell-green"></div>
+      </div>
+      <p class="layer-label">Layer 0 → Layer 31</p>
+    </div>
+  </div>
+
+  <div class="explanation-box">
+    <p class="explanation-text"><b>关键洞察：</b>第 0 层的输入混合矩阵是"金丝雀"——它最先显示不稳定迹象。如果你只能监控一个地方，就监控第 0 层。mHC 在所有层级、所有训练步数中均呈现绿色（稳定），完美验证了双随机约束的有效性。</p>
+  </div>
+</div>
+</body>
+</html>

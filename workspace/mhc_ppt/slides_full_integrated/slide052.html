@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>梁文锋DeepSeek新论文！接棒何恺明和字节，又稳了稳AI的“地基”</h1></div>
+  <div class="content">
+    <p class="text">因为理论上完美的数学方案（Sinkhorn-Knopp 迭代），如果直接跑在现有的训练框架上，会带来巨大的计算延迟和显存开销。</p>
+<p class="text">为了让这个“数学护栏”真正落地，DeepSeek 并没有调用现成的库，而是直接手写了底层的 CUDA 内核代码，利用算子融合（Operator Fusion）技术，把复杂的数学计算硬生生塞进了毫秒级的训练循环里。同时，他们采用了激进的“选择性重计算”策略，并在多卡训练中开辟专用计算流来掩盖通信延迟。</p>
+<p class="text">这才是前沿实验室（Frontier Lab）的标志——不仅要有算法灵感，还得有能力为了验证这个灵感，把整个训练环境的内核、内存管理、节点通信全部重写一遍。</p>
+  </div>
+</div>
+</body>
+</html>

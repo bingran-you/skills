@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 15pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 8pt;
+}
+h1 {
+  color: #181B24; font-size: 20pt; margin: 0;
+}
+.config-grid {
+  display: flex; gap: 10pt; margin: 8pt 0;
+}
+.config-col {
+  flex: 1;
+}
+.config-box {
+  background: #f5f5f7; padding: 8pt; border-radius: 6pt; margin-bottom: 6pt;
+}
+.config-title {
+  color: #B165FB; font-size: 10pt; font-weight: bold; margin-bottom: 4pt;
+}
+.config-item {
+  color: #333333; font-size: 9pt; margin: 3pt 0;
+}
+.config-value {
+  color: #666666;
+}
+.model-table {
+  margin-top: 6pt; width: 100%;
+}
+table {
+  width: 100%; border-collapse: collapse; font-size: 9pt;
+}
+th {
+  background: #181B24; color: #ffffff; padding: 4pt; text-align: center;
+}
+td {
+  padding: 4pt; text-align: center; border-bottom: 1pt solid #ddd;
+  background: #f5f5f7;
+}
+.link-box {
+  background: #181B24; padding: 6pt 10pt; border-radius: 6pt;
+}
+.link-text {
+  color: #B165FB; font-size: 9pt;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>复现实验配置</h1>
+  </div>
+
+  <div class="config-grid">
+    <div class="config-col">
+      <div class="config-box">
+        <p class="config-title">硬件配置</p>
+        <p class="config-item">GPU: <span class="config-value">8× H100 80GB</span></p>
+        <p class="config-item">来源: <span class="config-value">Lambda Labs</span></p>
+      </div>
+      <div class="config-box">
+        <p class="config-title">训练配置</p>
+        <p class="config-item">步数: <span class="config-value">5,000 步</span></p>
+        <p class="config-item">精度: <span class="config-value">BF16 混合精度</span></p>
+        <p class="config-item">随机种子: <span class="config-value">3 个</span></p>
+      </div>
+    </div>
+    <div class="config-col">
+      <div class="config-box">
+        <p class="config-title">数据集</p>
+        <p class="config-item">名称: <span class="config-value">C4 (英文网页文本)</span></p>
+      </div>
+      <div class="config-box">
+        <p class="config-title">实验变量</p>
+        <p class="config-item">架构: <span class="config-value">HC vs mHC</span></p>
+        <p class="config-item">深度: <span class="config-value">32/48/64层</span></p>
+        <p class="config-item">学习率: <span class="config-value">1× / 3×</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="model-table">
+    <table>
+      <tr>
+        <th>模型配置</th>
+        <th>参数量</th>
+        <th>层数</th>
+        <th>隐藏维度</th>
+      </tr>
+      <tr>
+        <td>Small</td>
+        <td>1.73B</td>
+        <td>32</td>
+        <td>2048</td>
+      </tr>
+      <tr>
+        <td>Large</td>
+        <td>2.54B</td>
+        <td>48</td>
+        <td>2048</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="link-box">
+    <p class="link-text">博客: taylorkolasinski.com/notes/mhc-reproduction/</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #40695B;
+}
+.content {
+  margin: 15pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #40695B; padding-left: 15pt; margin-bottom: 8pt;
+}
+h1 {
+  color: #181B24; font-size: 20pt; margin: 0;
+}
+.result-grid {
+  display: flex; gap: 8pt; margin: 8pt 0;
+}
+.result-card {
+  flex: 1; background: #f0fff0; border: 2pt solid #40695B;
+  padding: 8pt; border-radius: 6pt; text-align: center;
+}
+.result-icon {
+  font-size: 18pt; margin-bottom: 2pt;
+}
+.result-title {
+  color: #40695B; font-size: 10pt; font-weight: bold; margin-bottom: 2pt;
+}
+.result-value {
+  color: #181B24; font-size: 12pt; font-weight: bold; margin-bottom: 2pt;
+}
+.result-desc {
+  color: #666666; font-size: 8pt;
+}
+.benchmark-box {
+  background: #181B24; padding: 8pt 10pt; border-radius: 6pt; margin: 6pt 0;
+}
+.benchmark-title {
+  color: #B165FB; font-size: 10pt; font-weight: bold; margin-bottom: 6pt;
+}
+.benchmark-row {
+  display: flex; gap: 15pt;
+}
+.benchmark-item {
+  flex: 1; text-align: center;
+}
+.benchmark-label {
+  color: #888888; font-size: 8pt; margin-bottom: 2pt;
+}
+.benchmark-value {
+  color: #40695B; font-size: 12pt; font-weight: bold;
+}
+.key-metric {
+  background: #40695B; color: #ffffff; padding: 6pt 10pt;
+  border-radius: 6pt; text-align: center;
+}
+.key-text {
+  font-size: 10pt;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>官方实验结果</h1>
+  </div>
+
+  <div class="result-grid">
+    <div class="result-card">
+      <p class="result-icon">✅</p>
+      <p class="result-title">训练稳定性</p>
+      <p class="result-value">完全消除</p>
+      <p class="result-desc">HC 中的 Loss 尖峰问题</p>
+    </div>
+    <div class="result-card">
+      <p class="result-icon">📉</p>
+      <p class="result-title">收敛性能</p>
+      <p class="result-value">-0.021</p>
+      <p class="result-desc">最终 Loss 降低</p>
+    </div>
+    <div class="result-card">
+      <p class="result-icon">🚀</p>
+      <p class="result-title">收敛速度</p>
+      <p class="result-value">~1.8x</p>
+      <p class="result-desc">MoE 模型加速</p>
+    </div>
+  </div>
+
+  <div class="benchmark-box">
+    <p class="benchmark-title">下游任务性能提升 (27B模型)</p>
+    <div class="benchmark-row">
+      <div class="benchmark-item">
+        <p class="benchmark-label">BBH (推理)</p>
+        <p class="benchmark-value">+2.1%</p>
+      </div>
+      <div class="benchmark-item">
+        <p class="benchmark-label">DROP (阅读)</p>
+        <p class="benchmark-value">+2.3%</p>
+      </div>
+      <div class="benchmark-item">
+        <p class="benchmark-label">MATH</p>
+        <p class="benchmark-value">+1.8%</p>
+      </div>
+      <div class="benchmark-item">
+        <p class="benchmark-label">HumanEval</p>
+        <p class="benchmark-value">+1.5%</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="key-metric">
+    <p class="key-text">关键指标：n=4 扩展倍率下，<b>仅增加 6.7% 训练时间开销</b></p>
+  </div>
+</div>
+</body>
+</html>

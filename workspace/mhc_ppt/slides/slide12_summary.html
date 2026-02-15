@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 30pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 12pt;
+}
+h1 {
+  color: #181B24; font-size: 24pt; margin: 0;
+}
+.summary-points {
+  margin: 12pt 0;
+}
+.point {
+  display: flex; align-items: flex-start; margin: 10pt 0;
+}
+.point-icon {
+  background: #40695B; color: #ffffff; width: 22pt; height: 22pt;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 11pt; font-weight: bold; margin-right: 10pt; flex-shrink: 0;
+}
+.point-text {
+  color: #333333; font-size: 13pt; line-height: 1.4;
+}
+.highlight {
+  color: #B165FB; font-weight: bold;
+}
+.footer-box {
+  background: #181B24; padding: 12pt 15pt; border-radius: 8pt;
+  margin-top: 12pt; text-align: center;
+}
+.footer-quote {
+  color: #ffffff; font-size: 13pt; font-style: italic; margin-bottom: 8pt;
+}
+.footer-link {
+  color: #B165FB; font-size: 11pt;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>总结与展望</h1>
+  </div>
+
+  <div class="summary-points">
+    <div class="point">
+      <div class="point-icon">
+        <p style="margin: 0;">1</p>
+      </div>
+      <p class="point-text"><span class="highlight">mHC</span> 为基础模型的拓扑架构演进指明了方向，是对残差连接十年来最重要的改进之一</p>
+    </div>
+    <div class="point">
+      <div class="point-icon">
+        <p style="margin: 0;">2</p>
+      </div>
+      <p class="point-text">通过<span class="highlight">流形约束</span>解决了HC的数值不稳定性问题，同时保留了"加宽残差流"带来的性能提升</p>
+    </div>
+    <div class="point">
+      <div class="point-icon">
+        <p style="margin: 0;">3</p>
+      </div>
+      <p class="point-text">在<span class="highlight">27B参数</span>规模下验证了可扩展性，仅增加<span class="highlight">6.7%</span>训练时间开销</p>
+    </div>
+    <div class="point">
+      <div class="point-icon">
+        <p style="margin: 0;">4</p>
+      </div>
+      <p class="point-text">独立复现验证了mHC的有效性：在<span class="highlight">10924倍信号放大</span>下依然保持训练稳定</p>
+    </div>
+  </div>
+
+  <div class="footer-box">
+    <p class="footer-quote">「接棒何恺明残差连接，稳固AI的"地基"」</p>
+    <p class="footer-link">论文地址: https://arxiv.org/pdf/2512.24880</p>
+  </div>
+</div>
+</body>
+</html>

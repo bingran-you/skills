@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #181B24; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 15pt 40pt; width: 100%;
+}
+.section-label {
+  color: #B165FB; font-size: 9pt; text-transform: uppercase;
+  letter-spacing: 2pt; margin-bottom: 4pt;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 8pt;
+}
+h1 {
+  color: #ffffff; font-size: 20pt; margin: 0;
+}
+.intro-box {
+  background: rgba(255,255,255,0.05); border: 1pt solid #444;
+  padding: 10pt; border-radius: 6pt; margin: 8pt 0;
+}
+.intro-row {
+  display: flex; gap: 15pt; align-items: center;
+}
+.intro-icon {
+  font-size: 32pt;
+}
+.intro-text {
+  flex: 1;
+}
+.intro-name {
+  color: #B165FB; font-size: 14pt; font-weight: bold; margin-bottom: 4pt;
+}
+.intro-desc {
+  color: #cccccc; font-size: 10pt; line-height: 1.4;
+}
+.highlight-grid {
+  display: flex; gap: 10pt; margin: 8pt 0;
+}
+.highlight-card {
+  flex: 1; background: rgba(177, 101, 251, 0.1); border: 1pt solid #B165FB;
+  padding: 8pt; border-radius: 6pt; text-align: center;
+}
+.highlight-value {
+  color: #B165FB; font-size: 18pt; font-weight: bold; margin-bottom: 2pt;
+}
+.highlight-label {
+  color: #888888; font-size: 8pt;
+}
+.quote-box {
+  background: #40695B; padding: 8pt 10pt; border-radius: 6pt;
+}
+.quote-text {
+  color: #ffffff; font-size: 10pt; font-style: italic;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <p class="section-label">Part 6: 独立复现验证</p>
+  <div class="title-wrapper">
+    <h1>Taylor Kolasinski 的复现实验</h1>
+  </div>
+
+  <div class="intro-box">
+    <div class="intro-row">
+      <p class="intro-icon">👨‍💻</p>
+      <div class="intro-text">
+        <p class="intro-name">Taylor Kolasinski</p>
+        <p class="intro-desc">FlowMode 工程师，独立研究者。租用 8 张 H100 GPU，成功复现了 mHC，<b>结果比官方报告更加震撼</b>。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-grid">
+    <div class="highlight-card">
+      <p class="highlight-value">8×H100</p>
+      <p class="highlight-label">Lambda Labs 租用</p>
+    </div>
+    <div class="highlight-card">
+      <p class="highlight-value">1.7B</p>
+      <p class="highlight-label">参数模型规模</p>
+    </div>
+    <div class="highlight-card">
+      <p class="highlight-value">~17h</p>
+      <p class="highlight-label">总训练时间</p>
+    </div>
+    <div class="highlight-card">
+      <p class="highlight-value">10924×</p>
+      <p class="highlight-label">信号放大倍数</p>
+    </div>
+  </div>
+
+  <div class="quote-box">
+    <p class="quote-text">「我原本以为 DeepSeek 的 3000 倍放大已经很夸张了，没想到在我的实验中看到了 10924 倍！」</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header { background: #181B24; height: 54pt; display: flex; align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB; }
+.header h1 { color: #ffffff; font-size: 18pt; margin: 0; }
+.content { padding: 18pt 36pt 26pt 36pt; }
+.heading { font-size: 18pt; font-weight: bold; color: #181B24; margin: 0 0 8pt 0; }
+.text { font-size: 13pt; color: #333333; line-height: 1.5; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>租了8张H100，他成功复现了DeepSeek的mHC，结果比官方报告更炸裂</h1></div>
+  <div class="content">
+    <p class="text">作者还扫描了从 6 到 24 层的深度（保持约 11M 的常数参数预算）：</p>
+<p class="text">损失随着深度增加而改善，直到不再改善。深度 20 达到了甜蜜点（0.85 验证损失）。</p>
+<p class="text">深度 24 略有退步（0.93），这是由于为了将维度缩小到 192 而产生的宽度瓶颈。</p>
+<p class="text">Amax 是不可预测的。深度 20 飙升至 9.2 倍。深度 12 达到 6.6 倍。深度 8 保持在 4.3 倍。没有清晰的关系；HC 是混沌的。</p>
+<p class="text">实验细节</p>
+<p class="text">数据集： TinyShakespeare（约 1M 字符，字符级）</p>
+<p class="text">模型： GPT-2 架构，约 10M 参数</p>
+  </div>
+</div>
+</body>
+</html>

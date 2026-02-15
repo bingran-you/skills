@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex;
+}
+.slide { width: 720pt; height: 405pt; }
+.header {
+  background: #181B24; height: 54pt; display: flex;
+  align-items: center; padding: 0 36pt; border-bottom: 4pt solid #B165FB;
+}
+.header h1 { color: #ffffff; font-size: 24pt; margin: 0; }
+.content { padding: 24pt 36pt; }
+.cards { display: flex; gap: 16pt; }
+.card {
+  background: #ffffff; border-top: 6pt solid #B165FB; padding: 16pt;
+  width: 200pt; height: 220pt; box-sizing: border-box;
+}
+.card h2 { font-size: 16pt; color: #181B24; margin: 0 0 10pt 0; }
+.card p { font-size: 12.5pt; color: #333333; margin: 0 0 8pt 0; line-height: 1.4; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header"><h1>关键结论</h1></div>
+  <div class="content">
+    <div class="cards">
+      <div class="card">
+        <h2>稳定性</h2>
+        <p>双随机约束恢复恒等映射，抑制信号爆炸与漂移。</p>
+      </div>
+      <div class="card">
+        <h2>表达力</h2>
+        <p>多流并行结构保留 HC 的性能增益与信息交换潜力。</p>
+      </div>
+      <div class="card">
+        <h2>可落地性</h2>
+        <p>算法+系统优化结合，复现实验显示训练开销可控。</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

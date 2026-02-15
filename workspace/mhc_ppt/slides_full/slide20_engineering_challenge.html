@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #181B24; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 25pt 40pt; width: 100%;
+}
+.section-label {
+  color: #B165FB; font-size: 10pt; text-transform: uppercase;
+  letter-spacing: 2pt; margin-bottom: 6pt;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 12pt;
+}
+h1 {
+  color: #ffffff; font-size: 22pt; margin: 0;
+}
+.intro {
+  color: #cccccc; font-size: 11pt; line-height: 1.5; margin-bottom: 12pt;
+}
+.challenge-grid {
+  display: flex; gap: 10pt; margin: 10pt 0;
+}
+.challenge-card {
+  flex: 1; background: rgba(255,255,255,0.05); border: 1pt solid #444;
+  padding: 10pt; border-radius: 6pt;
+}
+.challenge-icon {
+  font-size: 22pt; margin-bottom: 6pt;
+}
+.challenge-title {
+  color: #B165FB; font-size: 11pt; font-weight: bold; margin-bottom: 4pt;
+}
+.challenge-desc {
+  color: #999999; font-size: 9pt; line-height: 1.4;
+}
+.quote-box {
+  background: #40695B; padding: 12pt 15pt; border-radius: 6pt; margin-top: 12pt;
+}
+.quote-text {
+  color: #ffffff; font-size: 11pt; font-style: italic; line-height: 1.4;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <p class="section-label">Part 4: 工程实现</p>
+  <div class="title-wrapper">
+    <h1>工程挑战</h1>
+  </div>
+
+  <p class="intro">理论上完美的 Sinkhorn-Knopp 迭代，在实际大规模训练中会遇到严峻的工程挑战：</p>
+
+  <div class="challenge-grid">
+    <div class="challenge-card">
+      <p class="challenge-icon">⏱️</p>
+      <p class="challenge-title">计算延迟</p>
+      <p class="challenge-desc">每次前向/反向传播都需要执行 Sinkhorn 迭代，直接实现会显著增加训练时间。</p>
+    </div>
+    <div class="challenge-card">
+      <p class="challenge-icon">💾</p>
+      <p class="challenge-title">显存开销</p>
+      <p class="challenge-desc">需要存储迭代过程中的中间激活，用于反向传播求梯度，显存占用剧增。</p>
+    </div>
+    <div class="challenge-card">
+      <p class="challenge-icon">🔄</p>
+      <p class="challenge-title">通信瓶颈</p>
+      <p class="challenge-desc">分布式训练中，额外的同步操作会造成节点间通信开销。</p>
+    </div>
+    <div class="challenge-card">
+      <p class="challenge-icon">🎯</p>
+      <p class="challenge-title">精度权衡</p>
+      <p class="challenge-desc">混合精度训练中，Sinkhorn 迭代的数值稳定性需要特别处理。</p>
+    </div>
+  </div>
+
+  <div class="quote-box">
+    <p class="quote-text">「这是一篇'秀肌肉'的硬核工程论文。不仅要有算法灵感，还得有能力把整个训练环境的内核、内存管理、节点通信全部重写一遍。」</p>
+  </div>
+</div>
+</body>
+</html>

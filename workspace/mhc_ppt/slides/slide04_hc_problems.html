@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 25pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 10pt;
+}
+h1 {
+  color: #181B24; font-size: 20pt; margin: 0;
+}
+.intro {
+  color: #333333; font-size: 11pt; line-height: 1.3; margin-bottom: 8pt;
+}
+.problem-card {
+  background: #fff5f5; border-left: 4pt solid #e74c3c;
+  padding: 8pt 10pt; margin: 6pt 0; border-radius: 0 6pt 6pt 0;
+}
+.problem-title {
+  color: #e74c3c; font-size: 13pt; font-weight: bold; margin-bottom: 4pt;
+}
+.problem-desc {
+  color: #333333; font-size: 11pt; line-height: 1.3;
+}
+.summary-box {
+  background: #181B24; padding: 10pt; border-radius: 6pt; margin-top: 8pt;
+}
+.summary-text {
+  color: #ffffff; font-size: 11pt; line-height: 1.3;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>字节Hyper-Connections的突破与问题</h1>
+  </div>
+  <p class="intro">近期，字节跳动Seed团队提出的 <b>Hyper-Connections (HC)</b> 通过扩展残差流宽度和多样化连接模式，拓展了残差连接范式。虽然带来了显著的性能提升，但也带来了<b>两个严重问题</b>：</p>
+
+  <div class="problem-card">
+    <p class="problem-title">数值不稳定性</p>
+    <p class="problem-desc">原始的 HC 中，连接矩阵是自由学习的，没有约束。这导致信号在经过多层传播后，数值会「爆炸」或「消失」，破坏了恒等映射的特性。</p>
+  </div>
+
+  <div class="problem-card">
+    <p class="problem-title">系统开销大</p>
+    <p class="problem-desc">通道变宽意味着显存读写 (I/O) 和通信成本成倍增加，也就是所谓的「显存墙」问题。</p>
+  </div>
+
+  <div class="summary-box">
+    <p class="summary-text">从根本上破坏了残差连接固有的恒等映射属性，导致了严重的训练不稳定性和受限的可扩展性，并额外增加了显著的内存访问开销。</p>
+  </div>
+</div>
+</body>
+</html>

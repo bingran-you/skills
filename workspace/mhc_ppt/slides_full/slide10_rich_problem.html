@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex;
+}
+.header-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 6pt;
+  background: #B165FB;
+}
+.content {
+  margin: 25pt 40pt; width: 100%;
+}
+.title-wrapper {
+  border-left: 6pt solid #B165FB; padding-left: 15pt; margin-bottom: 12pt;
+}
+h1 {
+  color: #181B24; font-size: 22pt; margin: 0;
+}
+.subtitle {
+  color: #666666; font-size: 12pt; font-style: italic; margin-bottom: 12pt;
+}
+.two-col {
+  display: flex; gap: 15pt; margin: 10pt 0;
+}
+.col {
+  flex: 1;
+}
+.scenario-box {
+  background: #f5f5f7; padding: 12pt; border-radius: 6pt; height: 100pt;
+}
+.scenario-title {
+  color: #666666; font-size: 11pt; margin-bottom: 6pt;
+}
+.scenario-icon {
+  font-size: 24pt; margin-bottom: 6pt;
+}
+.scenario-desc {
+  color: #333333; font-size: 10pt; line-height: 1.4;
+}
+.vs-box {
+  background: #181B24; padding: 12pt; border-radius: 6pt; height: 100pt;
+}
+.vs-title {
+  color: #B165FB; font-size: 11pt; margin-bottom: 6pt;
+}
+.vs-icon {
+  font-size: 24pt; margin-bottom: 6pt;
+}
+.vs-desc {
+  color: #ffffff; font-size: 10pt; line-height: 1.4;
+}
+.insight-box {
+  background: #40695B; color: #ffffff; padding: 12pt;
+  border-radius: 6pt; margin-top: 10pt;
+}
+.insight-text {
+  font-size: 11pt; line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="content">
+  <div class="title-wrapper">
+    <h1>"富人的问题"</h1>
+  </div>
+
+  <p class="subtitle">这个问题的特殊之处：只有在训练超大规模模型时才会显现</p>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="scenario-box">
+        <p class="scenario-title">普通研究者 / 小公司</p>
+        <p class="scenario-icon">🔬</p>
+        <p class="scenario-desc">训练 10M-1B 参数模型<br>HC 可能表现良好<br>问题不明显，容易忽略</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="vs-box">
+        <p class="vs-title">DeepSeek / 大厂</p>
+        <p class="vs-icon">🏭</p>
+        <p class="vs-desc">训练 27B+ 参数模型<br>HC 立即崩溃<br>必须解决才能继续</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <p class="insight-text"><b>洞察：</b>这是一个"scale-dependent"的问题。小规模实验中一切正常的技术，在扩展到生产规模时可能完全失效。<b>只有真正在前沿规模训练模型的团队，才会遭遇并有动力解决这类问题。</b></p>
+  </div>
+</div>
+</body>
+</html>
